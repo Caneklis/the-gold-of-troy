@@ -3,5 +3,17 @@
 }
 
 .page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-width: 0%;
   min-height: 100%;
+  font-family: $base-font;
+  background-color: #1c1c1e;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.page__main {
 }

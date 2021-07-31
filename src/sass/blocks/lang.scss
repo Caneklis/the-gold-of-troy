@@ -1,0 +1,17 @@
+.lang {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 24px;
+}
+
+.lang__link {
+  font-size: 20px;
+  line-height: 19px;
+  color: #d2aa74;
+  text-transform: uppercase;
+
+  &--active {
+    color: #ffffff;
+  }
+}

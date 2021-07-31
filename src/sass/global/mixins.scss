@@ -3,3 +3,36 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-right: 5.5%;
+  padding-left: 8.5%;
+}
+
+@mixin title {
+  margin: 0;
+  font-family: $title-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (min-width: 1024px) {
+    font-size: 80px;
+    line-height: 97px;
+  }
+}
+
+@mixin sectiontext {
+  font-size: 10px;
+  line-height: 12px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}

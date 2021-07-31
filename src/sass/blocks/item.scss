@@ -1,0 +1,11 @@
+.item {
+  padding-top: 120px;
+  background-image: url("../images/item-bg.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.item__article {
+  min-height: 100vh;
+}

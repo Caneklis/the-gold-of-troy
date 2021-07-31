@@ -22,13 +22,25 @@
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper">
-      {% include "../partials/_main-nav.html" %}
+      <div class="logo">
+        <a class="logo__link" href="#"><img src="images/logo.svg" width="246" height="36" alt="Логотип ГМИИ"></a>
+        <a class="logo__link" href="#"><img src="images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс"></a>
+      </div>
+
+      <div class="lang">
+        <a href="index.html" class="lang__link  lang__link--active">Рус</a>
+        <a href="index.html" class="lang__link">Eng</a>
+      </div>
+
     </div>
   </header>
 
   <!-- BEGIN content -->
-  <main class="page__main">
-    {% block content %}{% endblock %}
+  <main class="page__main  swiper-container">
+    <div class="swiper-wrapper">
+      {% block content %}{% endblock %}
+    </div>
+    {% include "../partials/_main-nav.html" %}
   </main>
   <!-- END content -->
 
@@ -39,7 +51,8 @@
   </footer>
 
   <!-- BEGIN scripts -->
-  <script src="{{ base_path }}js/libs.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ base_path }}js/main.min.js"></script>
   <!-- END scripts -->
 
