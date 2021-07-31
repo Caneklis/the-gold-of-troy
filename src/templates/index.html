@@ -1,0 +1,52 @@
+---
+title: Главная страница
+description: Description index
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# variable example #}
+<h1>Это {{title}}</h1>
+<h2>Это заголовок 2</h2>
+<h3>Это заголовок 3</h3>
+<h4>Это заголовок 4</h4>
+<h5>Это заголовок 5</h5>
+<h6>Это заголовок 6</h6>
+
+{% include 'partials/_accordion.html' %}
+
+{% include 'partials/_tab-section.html' %}
+
+{% markdown %}
+{% include 'post1.md' %}
+{% include 'post2.md' %}
+{% endmarkdown %}
+
+{# partial example #}
+{% include "partials/_header.html" %}
+
+{# mixin example #}
+{# {% import "partials/_mixins.html" as mixins %} #}
+{# {{mixins.icon('facebook')}} #}
+
+{{ mixins.field('user') }}
+{{ mixins.field('pass', type='password') }}
+
+{# data usage example #}
+{% import "data/data.html" as tests %}
+
+{% for test in tests.list %}
+<li>{{test.title}}</li>
+{% endfor %}
+{# end of example #}
+
+<div class="row">
+  <div class="item col">1</div>
+  <div class="item col">2</div>
+  <div class="item col">3</div>
+  <div class="item col">4</div>
+  <div class="item col">5</div>
+</div>
+
+{% endblock %}
