@@ -1,13 +1,14 @@
 .timeline-section {
-  padding-top: 120px;
-  background-image: url("../images/timeline-bg.png");
+  background-image: url("../images/bg-left.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .timeline-section__wrapper {
   max-width: 1440px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 100px;
   // min-height: 100vh;
+  height: 100%;
 }

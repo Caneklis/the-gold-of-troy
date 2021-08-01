@@ -2,7 +2,18 @@
   display: grid;
   grid-template-rows: 1fr min-content;
   // min-height: 80vh;
+  height: 100%;
 }
+
+.timeline__content-item {
+  display: none;
+
+  &--active {
+    display: block;
+    padding-top: 120px;
+  }
+}
+
 .timeline__list-years {
   @include list-reset;
   display: flex;

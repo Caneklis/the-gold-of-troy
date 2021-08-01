@@ -1,15 +1,16 @@
 .promo {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-image: url("../images/promo-bg.svg"),
     url("../images/promo-bg-2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  background-size: 100%, 100%;
+  height: 100%;
+  // min-height: 100vh;
   padding-top: 85px;
-  padding-bottom: 220px;
+  // padding-bottom: 220px;
 
   // #parallax {
   //   position: fixed;

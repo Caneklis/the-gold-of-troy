@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Optional parameters
     direction: "horizontal",
     loop: false,
-    autoHeight: true,
+    // autoHeight: true,
+    effect: "fade",
+    // mousewheel: {
+    //   releaseOnEdges: true,
+    // },
     speed: 300,
     parallax: true,
 
