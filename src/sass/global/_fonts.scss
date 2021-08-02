@@ -20,3 +20,11 @@
   src: url("../fonts/gothamproregular-webfont.woff2") format("woff2"),
     url("../fonts/gothamproregular-webfont.woff") format("woff");
 }
+
+@font-face {
+  font-family: "gotham_prolight";
+  src: url("../fonts/gothampro-light-webfont.woff2") format("woff2"),
+    url("../fonts/gothampro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

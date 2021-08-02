@@ -83,7 +83,7 @@ const styles = () => {
   return src("src/sass/style.{scss,sass}")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on("error", sass.logError))
     .pipe(
       postcss([
         autoprefixer({

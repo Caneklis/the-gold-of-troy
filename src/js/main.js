@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // eslint-disable-next-line no-console
   console.log("DOM полностью загружен и разобран");
   require("./modules/main-nav");
+  require("./modules/popup");
+  require("./modules/video");
   // require("./modules/timeline");
 
   const menuItems = document.querySelectorAll(".main-nav__link");
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var menu = [...menuItems];
   // init Swiper:
-  const swiper = new Swiper(".swiper-container", {
+  const swiper = new Swiper(".swiper-container-h", {
     // Optional parameters
     direction: "horizontal",
     loop: false,
@@ -63,6 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   swiper.activeIndex;
 
+  var swiperV = new Swiper(".swiper-container-v", {
+    pagination: {
+      el: ".swiper-pagination-v",
+      clickable: true,
+    },
+    paginationClickable: true,
+    direction: "horizontal",
+    spaceBetween: 50,
+    nested: true,
+  });
+
   // (function () {
   //   // Add event listener
   //   document.addEventListener("mousemove", parallax);
@@ -94,4 +107,57 @@ document.addEventListener("DOMContentLoaded", () => {
   // var msnry = new Masonry(".grid", {
   //   itemSelector: ".grid-item",
   // });
+
+  var description = $(".timeline__pin-description");
+  // var mp = null;
+
+  // function init(evt) {
+  //   if (window.svgDocument == null) {
+  //     svgDocument = evt.target.ownerDocument;
+  //   }
+  //   tooltip = svgDocument.getElementById("tooltip");
+  // }
+
+  $(".timeline__pin").on("click", function (e) {
+    this.classList.add("bla--active");
+    description.removeClass("timeline__pin-description--active");
+    description.addClass("timeline__pin-description--active");
+    description.html($(this).data("id"));
+
+    let elem = this.getBoundingClientRect();
+
+    console.log(elem.top + pageYOffset);
+    console.log(elem.left + pageXOffset);
+
+    description.css({
+      top: elem.top + pageYOffset,
+      left: elem.left + pageXOffset,
+    });
+  });
+
+  // $(document).on('mousemove', function(e){
+
+  //   description.css({
+  //     left:  e.pageX,
+  //     top:   e.pageY - 70
+  //   });
+
+  // });
+
+  const modals = document.querySelectorAll("[data-modal]");
+
+  modals.forEach(function (trigger) {
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      const modal = document.getElementById(trigger.dataset.modal);
+      modal.classList.add("open");
+      const exits = modal.querySelectorAll(".modal-exit");
+      exits.forEach(function (exit) {
+        exit.addEventListener("click", function (event) {
+          event.preventDefault();
+          modal.classList.remove("open");
+        });
+      });
+    });
+  });
 });

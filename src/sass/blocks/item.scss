@@ -1,5 +1,5 @@
 .item {
-  height: 100%;
+  min-height: 100vh;
   padding-top: 120px;
   background-image: url("../images/item-bg.svg");
   background-repeat: repeat;
@@ -19,7 +19,8 @@
 .item__article-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  max-width: 920px;
+  max-width: 1040px;
+  position: relative;
 }
 
 .item__article-thumbs {

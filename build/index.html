@@ -41,7 +41,7 @@
       </div>
     </header>
     <!-- BEGIN content -->
-    <main class="page__main  swiper-container">
+    <main class="page__main  swiper-container swiper-container-h">
       <div class="swiper-wrapper">
         <section class="promo  swiper-slide" id="promo" data-hash="promo">
           <!-- <img class="thumbnail" src="images/items/15.png" alt="image"> -->
@@ -54,50 +54,228 @@
           </div>
         </section>
         <section class="timeline-section  swiper-slide" id="timeline" data-hash="timeline">
-          <div class="timeline-section__wrapper">
-            <div class="timeline">
-              <div class="timeline__content">
-                <ul class="timeline__content-list">
-                  <li class="timeline__content-item  timeline__content-item--active">
-                    <article class="timeline__article"> ШЛИМАНОМ открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А </article>
-                  </li>
-                  <li class="timeline__content-item">1874 г.</li>
-                  <li class="timeline__content-item">1874—1875 гг.</li>
-                  <li class="timeline__content-item">1876 г.</li>
-                  <li class="timeline__content-item">1878—1879 гг.</li>
-                  <li class="timeline__content-item">1881 1887 (?) гг.</li>
-                  <li class="timeline__content-item">1890 г.</li>
-                  <li class="timeline__content-item">1902 г.</li>
-                  <li class="timeline__content-item">1922 г.</li>
-                  <li class="timeline__content-item">1941 г.</li>
-                  <li class="timeline__content-item">1945 г.</li>
-                  <li class="timeline__content-item">Декабрь 1994 — январь 1995 гг.</li>
-                  <li class="timeline__content-item">1996-1997 г.</li>
-                  <li class="timeline__content-item">1997 г. — по наст. время</li>
-                </ul>
-              </div>
-              <div class="timeline__line">
-                <ul class="timeline__list-years">
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">27-31 мая 1873 г.</button>
-                  </li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1874 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1874—1875 гг.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1876 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1878—1879 гг.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1881 1887 (?) гг.</button>
-                  </li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1890 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1902 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1922 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1941 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1945 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">Декабрь 1994 — январь 1995 гг.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1996-1997 г.</button></li>
-                  <li class="timeline__list-year"><button class="timeline__year-btn" type="button">1997 г. — по наст. время</button></li>
-                </ul>
-              </div>
+          <!-- <div class="timeline-section__wrapper"> -->
+          <div class="timeline">
+            <div class="timeline__content">
+              <ul class="timeline__content-list">
+                <li class="timeline__content-item" data-popup-modal="year-id-1">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="3" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(879.000000, 593.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="3" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(879.000000, 593.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="3" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(879.000000, 593.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+                <li class="timeline__content-item" data-popup-modal="year-id-2">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ 2</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                        <g class="timeline__pin" id="1" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(1052.000000, 715.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <g class="timeline__pin" id="2" data-id="София Шлиман в украшениях из «Сокровища Приама», 1875 г." transform="translate(195.000000, 504.000000)">
+                          <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                          <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                          <polygon id="Path" fill="#000000" fill-rule="nonzero" points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                          </polygon>
+                        </g>
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+                <li class="timeline__content-item" data-popup-modal="year-id-3">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ 3</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <!--  -->
+                        <!--  -->
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+                <li class="timeline__content-item" data-popup-modal="year-id-4">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ 4</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <!--  -->
+                        <!--  -->
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+                <li class="timeline__content-item" data-popup-modal="year-id-5">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ 5</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <!--  -->
+                        <!--  -->
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+                <li class="timeline__content-item" data-popup-modal="year-id-6">
+                  <article class="timeline__article">
+                    <h2><span>ШЛИМАНОМ 6</span> открыт комплекс из 8830 предметов, которому он дал название «Сокровище Приама», клад А</h2>
+                  </article>
+                  <div class="timeline__pins">
+                    <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <image href="images/timeline-1.png" width="1440" height="922" />
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <!-- 
+                 -->
+                        <!--  -->
+                        <!--  -->
+                        <!--  -->
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="timeline__pin-description"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="timeline__line">
+              <ul class="timeline__list-years">
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-1" type="button">27-31 мая 1873 г.</button>
+                </li>
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-2" type="button">1874 г.</button>
+                </li>
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-3" type="button">1874—1875 гг.</button>
+                </li>
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-4" type="button">1876 г.</button>
+                </li>
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-5" type="button">1878—1879 гг.</button>
+                </li>
+                <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-6" type="button">1881 1887 (?) гг.</button>
+                </li>
+              </ul>
             </div>
           </div>
+          <!-- </div> -->
         </section>
         <section class="collection  swiper-slide" id="collection" data-hash="collection">
           <div class="collection__wrapper">
@@ -207,7 +385,7 @@
         <section class="person  swiper-slide" data-hash="person">
           <div class="person__wrapper">
             <h2 class="person__title">Генрих Шлиман</h2>
-            <p class="person__year">1822 — 1890</p>
+            <p class="person__years">1822 — 1890</p>
             <div class="person__description">
               <div class="person__photo"><img src="images/shliman.jpg" alt=""></div>
               <div class="person__text">
@@ -219,7 +397,51 @@
             </div>
           </div>
         </section>
-        <section class="video-section  swiper-slide" data-hash="video"></section>
+        <section class="video-section  swiper-slide" data-hash="video">
+          <div class="video-section__wrapper">
+            <div class="swiper-container swiper-container-v">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="video">
+                    <a class="video__link" href="https://youtu.be/eksQ90dRcHk">
+                      <picture>
+                        <source srcset="https://i.ytimg.com/vi_webp/eksQ90dRcHk/maxresdefault.webp" type="image/webp">
+                        <img class="video__media" src="https://i.ytimg.com/vi/eksQ90dRcHk/maxresdefault.jpg" alt="Научно-исследовательский проект «Золото Трои»">
+                      </picture>
+                    </a>
+                    <button class="video__button" aria-label="Запустить видео">
+                      <svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="video__button-shape" opacity="0.9">
+                          <circle cx="94" cy="94" r="94" fill="#F2CC91" />
+                          <path d="M127 94.5L76.75 123.512V65.4881L127 94.5Z" fill="#1C1C1F" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="video">
+                    <a class="video__link" href="https://youtu.be/eksQ90dRcHk">
+                      <picture>
+                        <source srcset="https://i.ytimg.com/vi_webp/eksQ90dRcHk/maxresdefault.webp" type="image/webp">
+                        <img class="video__media" src="https://i.ytimg.com/vi/eksQ90dRcHk/maxresdefault.jpg" alt="Научно-исследовательский проект «Золото Трои»">
+                      </picture>
+                    </a>
+                    <button class="video__button" aria-label="Запустить видео">
+                      <svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="video__button-shape" opacity="0.9">
+                          <circle cx="94" cy="94" r="94" fill="#F2CC91" />
+                          <path d="M127 94.5L76.75 123.512V65.4881L127 94.5Z" fill="#1C1C1F" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+          </div>
+        </section>
       </div>
       <nav class="main-nav">
         <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
