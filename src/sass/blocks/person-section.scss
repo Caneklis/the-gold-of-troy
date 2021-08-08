@@ -1,16 +1,8 @@
 .person {
-  min-height: 100vh;
-  background-image: url("../images/person-bg.png"), url("../images/bg-left.svg");
-  background-repeat: no-repeat;
-  background-size: contain, contain;
-  background-position-y: bottom, top;
-  background-position-x: right, left;
 }
 .person__wrapper {
-  @include wrapper;
-  padding-top: 120px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content max-content;
 }
 
 .person__title {
@@ -26,6 +18,7 @@
 }
 
 .person__description {
+  grid-column: 1/-1;
   width: 100%;
   padding-top: 16px;
   max-width: 920px;

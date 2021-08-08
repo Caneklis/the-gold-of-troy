@@ -19,7 +19,8 @@
   <link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest">
 </head>
 
-<body class="page__body">
+<body class="page__body  page__body--inner">
+
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
@@ -27,13 +28,24 @@
         <a class="logo__link" href="#"><img src="images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс"></a>
       </div>
 
+      <div class="lang">
+        <a href="index.html" class="lang__link  lang__link--active">Рус</a>
+        <a href="index.html" class="lang__link">Eng</a>
+      </div>
     </div>
   </header>
 
   <!-- BEGIN content -->
-  <main class="page__main">
+  <div class="back-page-nav">
+    <a href="index.html#collection">
+      <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+        <use href="images/sprite_auto.svg#back-icon"></use>
+      </svg>
+    </a>
+  </div>
+  {% include "../partials/_main-nav.html" %}
+  <main class="page__main  page__main--inner">
     {% block content %}{% endblock %}
-    {% include "../partials/_main-nav.html" %}
   </main>
   <!-- END content -->
 

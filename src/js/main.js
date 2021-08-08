@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   require("./modules/main-nav");
   require("./modules/popup");
   require("./modules/video");
-  // require("./modules/timeline");
+  require("./modules/timeline");
 
   const menuItems = document.querySelectorAll(".main-nav__link");
   menuItems.forEach((item) => {
@@ -18,24 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var menu = [...menuItems];
   // init Swiper:
-  const swiper = new Swiper(".swiper-container-h", {
-    // Optional parameters
+  const mainSlider = new Swiper(".swiper-container-h", {
     direction: "horizontal",
     loop: false,
-    // autoHeight: true,
-    effect: "fade",
+    // effect: "fade",
     // mousewheel: {
     //   releaseOnEdges: true,
     // },
-    speed: 300,
+    speed: 500,
     parallax: true,
+    allowTouchMove: false,
 
     keyboard: {
       enabled: true,
       onlyInViewport: false,
     },
 
-    // If we need pagination
     pagination: {
       el: ".main-nav__list",
       clickable: true,
@@ -48,32 +46,69 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
 
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-
     hashNavigation: {
       replaceState: true,
     },
   });
-  swiper.activeIndex;
 
-  var swiperV = new Swiper(".swiper-container-v", {
+  const body = document.querySelector("body");
+
+  if (document.querySelector(".swiper-container-h")) {
+    console.log("blaa");
+    body.classList.add(`page__body--slide-${mainSlider.activeIndex + 1}`);
+  }
+
+  mainSlider.on("afterInit", function (e) {
+    const slides = document.querySelectorAll(".main-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+      if (this.activeIndex == i) {
+        body.className = "page__body";
+        body.classList.add(`page__body--slide-${i + 1}`);
+      }
+    }
+  });
+
+  mainSlider.on("transitionEnd", function (e) {
+    const slides = document.querySelectorAll(".main-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+      if (this.activeIndex == i) {
+        body.className = "page__body";
+        body.classList.add(`page__body--slide-${i + 1}`);
+      }
+    }
+  });
+
+  mainSlider.on("transitionStart", function (e) {
+    const slides = document.querySelectorAll(".main-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+      if (this.activeIndex == i) {
+        body.className = "page__body";
+        body.classList.add(`page__body--slide-${i + 1}`);
+      }
+    }
+  });
+
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    nasted: true,
     pagination: {
-      el: ".swiper-pagination-v",
+      el: ".swiper-pagination",
       clickable: true,
     },
-    paginationClickable: true,
-    direction: "horizontal",
-    spaceBetween: 50,
-    nested: true,
+  });
+  var galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+    nasted: true,
   });
 
   // (function () {

@@ -1,9 +1,11 @@
 .visually-hidden {
-  position: absolute;
-  width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  margin: -1px;
-  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .swiper-container {
@@ -11,13 +13,13 @@
   height: 100%;
 }
 
-.swiper-slide {
-  opacity: 0 !important;
+// .swiper-slide {
+//   opacity: 0 !important;
 
-  &-active {
-    opacity: 1 !important;
-  }
-}
+//   &-active {
+//     opacity: 1 !important;
+//   }
+// }
 
 .modal {
   position: absolute;

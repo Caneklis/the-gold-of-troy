@@ -15,8 +15,77 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+
+  max-width: 1920px;
+  display: grid;
+  grid-template-columns: 85px 3.7fr 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  &--inner {
+    grid-template-columns: 85px 2.5fr 1fr;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 30px 2.5fr 1fr;
+    }
+
+    background-image: url("../images/item-bg.svg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 30px 2.5fr 1fr;
+  }
+
+  &--slide-1 {
+    background-image: url("../images/promo-bg.svg"),
+      url("../images/promo-bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover, 100%;
+    background-position-y: top;
+  }
+
+  &--slide-2 {
+    background-image: none;
+    background-image: url("../images/bg-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--slide-3 {
+    background-image: none;
+    background-image: url("../images/item-bg.svg");
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  &--slide-4 {
+    background-image: none;
+    background-image: url("../images/person-bg.png"),
+      url("../images/bg-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain, contain;
+    background-position-y: bottom, top;
+    background-position-x: right, left;
+  }
+
+  &--slide-5 {
+    background-image: none;
+    background-image: url("../images/promo-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
 }
 
 .page__main {
-  height: 100%;
+  grid-column: 2/-1;
+  grid-row: 2/3;
+  // height: 100%;
+
+  &--inner {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }

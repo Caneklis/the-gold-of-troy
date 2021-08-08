@@ -1,14 +1,17 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  z-index: 30;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  padding-right: 8.9%;
 }
 
 .header__wrapper {
-  @include wrapper;
-  padding-top: 40px;
+  // @include wrapper;
+  padding-top: 53px;
   padding-bottom: 10px;
   display: flex;
   position: relative;

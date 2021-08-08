@@ -1,4 +1,4 @@
-<section class="timeline-section  swiper-slide" id="timeline" data-hash="timeline">
+<section class="timeline-section  swiper-slide  main-slide" id="timeline" data-hash="timeline">
   <!-- <div class="timeline-section__wrapper"> -->
 
   <div class="timeline">
@@ -10,31 +10,32 @@
           <article class="timeline__article">
             <h2><span>{{item.title}}</span> {{item.subtitle}}</h2>
 
-          </article>
-          <div class="timeline__pins">
-            <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <image href="{{item.image}}" width="1440" height="922" />
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <!-- {% import "../data/1873.html" as pins %}
+            <div class="timeline__pins">
+              <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <image href="{{item.image}}" width="1440" height="922" />
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <!-- {% import "../data/1873.html" as pins %}
                 {% for pin in pins.list %} -->
 
-                {% for pin in item.pinslist %}
-                <g class="timeline__pin" id="{{pin.id}}" data-id="{{pin.text}}"
-                  transform="translate({{pin.x}}.000000, {{pin.y}}.000000)">
-                  <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
-                  <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
-                  <polygon id="Path" fill="#000000" fill-rule="nonzero"
-                    points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
-                  </polygon>
+                  {% for pin in item.pinslist %}
+                  <g class="timeline__pin" id="{{pin.id}}" data-id="{{pin.text}}"
+                    transform="translate({{pin.x}}.000000, {{pin.y}}.000000)">
+                    <circle fill="#FAD398" fill-rule="nonzero" cx="20.5" cy="20.5" r="13.5"></circle>
+                    <circle stroke="#FAD398" cx="20.5" cy="20.5" r="20"></circle>
+                    <polygon id="Path" fill="#000000" fill-rule="nonzero"
+                      points="19.867 25.8 19.867 21.68 15.707 21.68 15.707 20.24 19.867 20.24 19.867 16.12 21.347 16.12 21.347 20.24 25.507 20.24 25.507 21.68 21.347 21.68 21.347 25.8">
+                    </polygon>
+                  </g>
+                  {% endfor %}
+                  <!-- {% endfor %} -->
                 </g>
-                {% endfor %}
-                <!-- {% endfor %} -->
-              </g>
-            </svg>
-          </div>
+              </svg>
+              <div class="timeline__pin-description"></div>
+            </div>
+          </article>
 
-          <div class="timeline__pin-description"></div>
+
         </li>
         {% endfor %}
       </ul>

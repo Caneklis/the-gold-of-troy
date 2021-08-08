@@ -39,6 +39,7 @@
   @include list-reset;
   display: none;
   border-right: 1px solid #ffffff;
+  width: 100%;
 
   &--open {
     display: flex;
@@ -80,13 +81,17 @@
 }
 
 .main-nav {
-  position: fixed;
-  top: 50%;
-  right: 8%;
-  transform: translateY(-50%);
-  z-index: 10;
+  // position: fixed;
+  // top: 50%;
+  // right: 8%;
+  // transform: translateY(-50%);
+  // z-index: 10;
   display: flex;
   align-items: center;
+  grid-column: 3/4;
+  grid-row: 1/-1;
+  padding-right: 23%;
+  z-index: 20;
 }
 
 .main-nav__item {

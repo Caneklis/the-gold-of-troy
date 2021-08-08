@@ -19,7 +19,7 @@
   <link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest">
 </head>
 
-<body class="page__body">
+<body class="page__body  page__body--slide-1">
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
@@ -31,16 +31,16 @@
         <a href="index.html" class="lang__link  lang__link--active">Рус</a>
         <a href="index.html" class="lang__link">Eng</a>
       </div>
-
     </div>
   </header>
+
+  {% include "../partials/_main-nav.html" %}
 
   <!-- BEGIN content -->
   <main class="page__main  swiper-container swiper-container-h">
     <div class="swiper-wrapper">
       {% block content %}{% endblock %}
     </div>
-    {% include "../partials/_main-nav.html" %}
   </main>
   <!-- END content -->
 

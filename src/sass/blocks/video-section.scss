@@ -1,11 +1,5 @@
 .video-section {
-  min-height: 100vh;
-  background-image: url("../images/promo-bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: right;
-
-  .swiper-container-v {
+  .swiper-container {
     max-width: 920px;
     margin: 0;
   }
@@ -33,6 +27,12 @@
 }
 
 .video-section__wrapper {
-  @include wrapper;
-  padding-top: 244px;
+  // @include wrapper;
+  // padding-top: 244px;
+}
+
+.gallery-thumbs .swiper-slide {
+  // width: 20%;
+  height: 100%;
+  opacity: 1 !important;
 }
