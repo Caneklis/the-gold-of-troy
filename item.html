@@ -27,25 +27,59 @@
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
     <link rel="manifest" href="favicon/manifest.webmanifest">
   </head>
-  <body class="page__body">
+  <body class="page__body  page__body--inner">
     <header class="header">
       <div class="header__wrapper">
         <div class="logo">
           <a class="logo__link" href="#"><img src="images/logo.svg" width="246" height="36" alt="Логотип ГМИИ"></a>
           <a class="logo__link" href="#"><img src="images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс"></a>
         </div>
+        <div class="lang">
+          <a href="index.html" class="lang__link  lang__link--active">Рус</a>
+          <a href="index.html" class="lang__link">Eng</a>
+        </div>
       </div>
     </header>
     <!-- BEGIN content -->
-    <main class="page__main">
+    <div class="back-page-nav">
+      <a href="index.html#collection">
+        <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+          <use href="images/sprite_auto.svg#back-icon"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
+        <svg class="main-nav__icon" aria-hidden="true" width="32" height="32">
+          <use class="main-nav__icon-menu" href="images/sprite_auto.svg#menu"></use>
+          <use class="main-nav__icon-cross" href="images/sprite_auto.svg#cross"></use>
+        </svg>
+      </button>
+      <ul class="main-nav__list" id="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html#promo">Троя</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html#timeline">История коллекции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html#collection">Коллекция Пушкинского</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html#person">Генрих Шлиман</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html#video">Видео</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="page__main  page__main--inner">
       <section class="item">
         <div class="item__wrapper">
-          <div class="back-page-nav">
-            <a href="index.html#collection">Назад</a>
-          </div>
           <article class="item__article">
             <header class="item__article-header">
-              <h1>СЕРЬГА В ФОРМЕ ЛУННИЦЫ С ЗЕРНЬЮ</h1>
+              <h1 class="item__article-name">СЕРЬГА</h1>
+              <p class="item__article-name-description">В ФОРМЕ ЛУННИЦЫ С ЗЕРНЬЮ</p>
               <table>
                 <tr>
                   <td>Материал:</td>
@@ -61,16 +95,16 @@
               <div class="item__article-photos">
                 <div class="item__article-full-photo"><a href="images/item-full.png" data-modal="pic-1"><img src="images/item-full.png" alt="Описание к фото"></a>
                 </div>
-                <ul class="item__article-thumbs">
-                  <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
-                  <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
-                  <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
-                  <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
-                </ul>
               </div>
               <div class="item__arcticle-text">
                 <p>Серьга в форме лунницы состоит из цельного полукольца, образованного массивной, утолщающейся в центральной части проволокой. Оно переходит в дужку круглого сечения, заканчивающуюся заостренной иглой, согнутой по контуру серьги. Лунница имеет трехгранное сечение; верхняя грань — слегка вогнута. Ребра украшены рядами зерни. Боковые грани орнаментированы дуговидными рядами зерни, повторяющими контуры лунницы — по восемь на каждой. Конец полукольца украшен шайбами, насаженными на круглый в сечении конец лунницы: средняя, имеет округлую форму с гладкими краями, крайние — подобной же формы с зубчатыми краями. Завершение полукольца закреплено подвижно.</p>
               </div>
+              <ul class="item__article-thumbs">
+                <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
+                <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
+                <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
+                <li class="item__article-thumb"><a href="#"><img src="images/item-thumb.png" alt=""></a></li>
+              </ul>
               <div class="modal" id="pic-1">
                 <div class="modal-bg modal-exit"></div>
                 <div class="modal-container">
@@ -87,33 +121,6 @@
           </article>
         </div>
       </section>
-      <nav class="main-nav">
-        <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
-          <svg class="main-nav__icon" aria-hidden="true" width="32" height="32">
-            <use class="main-nav__icon-menu" href="images/sprite_auto.svg#menu"></use>
-            <use class="main-nav__icon-cross" href="images/sprite_auto.svg#cross"></use>
-          </svg>
-        </button>
-        <ul class="main-nav__list" id="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html#promo">Троя</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html#timeline">История коллекции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html#collection">Коллекция Пушкинского</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html#person">Генрих Шлиман</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html#video">Видео</a>
-          </li>
-        </ul>
-      </nav>
-      <script>
-      </script>
     </main>
     <!-- END content -->
     <footer class="footer">
