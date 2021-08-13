@@ -1225,6 +1225,7 @@ button {
 .modal {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
 
   display: flex;
@@ -1233,6 +1234,7 @@ button {
   width: 100%;
   height: 100%;
 
+  background: #1c1c1f;
   visibility: hidden;
   opacity: 0;
 
@@ -1245,8 +1247,6 @@ button {
   transition-delay: 0s;
 }
 .modal-bg {
-  position: absolute;
-
   width: 100%;
   height: 100%;
 
@@ -1255,9 +1255,21 @@ button {
 .modal-container {
   position: relative;
 
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 625px;
   padding: 30px;
+  overflow: hidden;
 
   border-radius: 10px;
+}
+.modal-container img {
+  width: 100%;
+  height: 100%;
+
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .modal-close {
   position: absolute;
@@ -1304,9 +1316,10 @@ button {
   scroll-behavior: smooth;
 }
 .page__body--inner {
-  background-image: url("../images/item-bg.svg");
-  background-repeat: repeat;
-  background-size: cover;
+  background-image: url("../images/item-bg.svg"), url("../images/item-bg-2.svg");
+  background-repeat: repeat, no-repeat;
+  background-position-x: center, right;
+  background-size: cover, contain;
   background-attachment: fixed;
 
   grid-template-columns: 85px 2.5fr 1fr;
@@ -2032,6 +2045,24 @@ button {
 
   font-size: 16px;
   line-height: 22px;
+}
+
+.item__article-full-photo {
+  margin-bottom: 40px;
+}
+.item__article-full-photo a {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;
+}
+.item__article-full-photo img {
+  width: 100%;
+  height: 100%;
+
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .back-page-nav {

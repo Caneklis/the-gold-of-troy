@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // },
     speed: 500,
     parallax: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
 
     keyboard: {
       enabled: true,

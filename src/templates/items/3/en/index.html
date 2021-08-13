@@ -1,0 +1,90 @@
+---
+title: Small
+subtitle: fluted beaker
+description: Description test
+lang: en
+num: Аар 5, Бз 293, П 423, А 5864
+material: Gold; weight 69.45 g
+tech: Ковка.
+size: Height 7.2 cm; diameter of the mouth 6.5 cm; thickness of the wall 0.18 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../1200-1.png" data-modal="pic-1"><img src="../1200-1.png"
+                alt="Описание к фото"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A boat-shaped vessel with a horizontal rising spout at each end. The sides and spouts are asymmetrical.
+            Both spouts have somewhat flattened openings with sharply everted projections, but one of the spouts has its
+            sides pressed together, giving it an elliptical shape and an incompletely closed mouth. The other is wide
+            open; it seems it had once been compressed and was then reopened. The upper edge of the vessel has a
+            projecting interior rim with a roughly triangular cross-section. Along the axis of the exterior of the
+            vessel is a long, hammered, raised, longitudinal roll-shaped rib, which in the center flares into an
+            almond-shaped base. Corresponding to this in the interior of the vessel is an indented groove running along
+            the whole length of the relief rib. The interior surface retains clearly visible marks from the tools used
+            to shape the vessel; there are also numerous fine longitudinal scratches. The outside surface is
+            substantially smoother, without pronounced traces of hammering.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../1200-1.png" data-modal="pic-{{item}}"><img
+                src="../125-{{item}}.png" alt=""></a></li>
+          {%- endfor %}
+        </ul>
+
+        {% for item in range(1, 5) -%}
+        <div class="modal" id="pic-{{item}}">
+          <div class="modal-container">
+            <img src="../1200-{{item}}.png" alt="Описание к фото">
+          </div>
+
+          <button class="modal-close modal-exit" aria-label="Закрыть окно">
+            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.5" x2="41.0366" y2="-0.5" transform="matrix(-0.682318 -0.731055 0.547452 -0.836837 29 30)"
+                stroke="#F2CC91" />
+              <line y1="-0.5" x2="41.0366" y2="-0.5" transform="matrix(0.682318 -0.731055 -0.547452 -0.836837 1 30)"
+                stroke="#F2CC91" />
+            </svg>
+
+          </button>
+        </div>
+
+        {%- endfor %}
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

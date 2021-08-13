@@ -152,6 +152,7 @@ const copy = () => {
   return src(
     [
       "src/*.html",
+      "src/templates/items/**/*.{png,jpg,gif}",
       "src/images/**/*.{png,jpg,gif}",
       "src/fonts/**",
       "src/favicon/**",
@@ -192,6 +193,7 @@ const optimizeImages = () => {
 exports.build = build;
 exports.start = start;
 exports.sprite = sprite;
+exports.copy = copy;
 exports.imagemin = optimizeImages;
 exports.svgo = svgo;
 exports.default = series(build, start);
