@@ -11,6 +11,11 @@
   color: #d2aa74;
   text-transform: uppercase;
 
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 13px;
+  }
+
   &--active {
     color: #ffffff;
   }
