@@ -1,15 +1,19 @@
 const modalTriggers = document.querySelectorAll(".popup-trigger");
 const modalContent = document.querySelectorAll(".timeline__content-item");
 
-setTimeout(() => {
-  if (modalContent) {
-    modalContent[0].classList.add("timeline__content-item--active");
-  }
-  if (modalTriggers) {
-    modalTriggers[0].classList.add("timeline__year-btn--active");
-    modalTriggers[0].parentElement.classList.add("timeline__list-year--active");
-  }
-}, 1000);
+if (modalContent > 0) {
+  setTimeout(() => {
+    if (modalContent) {
+      modalContent[0].classList.add("timeline__content-item--active");
+    }
+    if (modalTriggers) {
+      modalTriggers[0].classList.add("timeline__year-btn--active");
+      modalTriggers[0].parentElement.classList.add(
+        "timeline__list-year--active"
+      );
+    }
+  }, 1000);
+}
 
 modalTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {

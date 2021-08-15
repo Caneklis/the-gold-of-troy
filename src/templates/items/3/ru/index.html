@@ -1,4 +1,5 @@
 ---
+id: 3
 title: Кубок
 subtitle: малый каннелированный
 description: Description test
@@ -39,8 +40,8 @@ size: Высота 7,2 см.; диаметр устья 6,5 см.; толщин�
       </header>
       <div class="item__article-content">
         <div class="item__article-photos">
-          <div class="item__article-full-photo"><a href="../1200-1.png" data-modal="pic-1"><img src="../1200-1.png"
-                alt="Описание к фото"></a>
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
           </div>
         </div>
         <div class="item__arcticle-text">
@@ -54,31 +55,16 @@ size: Высота 7,2 см.; диаметр устья 6,5 см.; толщин�
         <ul class="item__article-thumbs">
 
           {% for item in range(1, 5) -%}
-          <li class="item__article-thumb"><a href="../1200-1.png" data-modal="pic-{{item}}"><img
-                src="../125-{{item}}.png" alt=""></a></li>
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy""></a></li>
           {%- endfor %}
         </ul>
 
-        {% for item in range(1, 5) -%}
-        <div class="modal" id="pic-{{item}}">
-          <div class="modal-container">
-            <img src="../1200-{{item}}.png" alt="Описание к фото">
-          </div>
-
-          <button class="modal-close modal-exit" aria-label="Закрыть окно">
-            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="-0.5" x2="41.0366" y2="-0.5" transform="matrix(-0.682318 -0.731055 0.547452 -0.836837 29 30)"
-                stroke="#F2CC91" />
-              <line y1="-0.5" x2="41.0366" y2="-0.5" transform="matrix(0.682318 -0.731055 -0.547452 -0.836837 1 30)"
-                stroke="#F2CC91" />
-            </svg>
-
-          </button>
-        </div>
-
-        {%- endfor %}
+        <div class=" modal">
       </div>
-    </article>
+  </div>
+  </article>
   </div>
 </section>
 

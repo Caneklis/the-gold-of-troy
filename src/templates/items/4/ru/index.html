@@ -1,0 +1,70 @@
+---
+id: 4
+title: Кубок
+subtitle: большой каннелированный
+description: Description test
+lang: ru
+num: Аар 6, Бз 294, П 424, А 5865
+material: Золото; вес 225,74 г.
+tech: Ковка
+size: Высота 8,7 см.; диаметр устья 7,9-8,0 см.; диаметр основания 3,9 см.; толщина стенок 0,13 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Кубок тюльпановидной формы на маленьком кольцевом выступающем поддоне. Край слегка отогнут наружу и
+            оформлен внутренней и наружной закраинами. По всей поверхности стенок идут диагональные ребра, выбитые
+            изнутри сосуда, не доходящие до края сосуда 9 мм. Дно выдавлено внутрь. Кубок выкован из одного куска
+            металла.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

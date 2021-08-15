@@ -5,9 +5,9 @@
   grid-column: 1/2;
   grid-row: 2/3;
   width: 52px;
-  height: 363px;
+  height: 160px;
   background-color: #d2aa74;
-  margin: auto 8px auto auto;
+  margin: 250px 8px auto auto;
 
   a {
     display: flex;
@@ -17,6 +17,7 @@
 
   @media (max-width: 1023px) {
     width: 30px;
-    height: 208px;
+    height: 100px;
+    margin-top: auto;
   }
 }

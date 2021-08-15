@@ -1,0 +1,75 @@
+---
+id: 4
+title: Large
+subtitle: fluted beaker
+description: Description test
+lang: en
+num: Аар 6, Бз 294, П 424, А 5865
+material: Gold; weight 226.76 g
+tech: Ковка.
+size: Height 8.7 cm; diameter of mouth 7.9-8.0 cm; diameter of base 3.9 cm; thickness of walls 0.13 cm
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A boat-shaped vessel with a horizontal rising spout at each end. The sides and spouts are asymmetrical.
+            Both spouts have somewhat flattened openings with sharply everted projections, but one of the spouts has its
+            sides pressed together, giving it an elliptical shape and an incompletely closed mouth. The other is wide
+            open; it seems it had once been compressed and was then reopened. The upper edge of the vessel has a
+            projecting interior rim with a roughly triangular cross-section. Along the axis of the exterior of the
+            vessel is a long, hammered, raised, longitudinal roll-shaped rib, which in the center flares into an
+            almond-shaped base. Corresponding to this in the interior of the vessel is an indented groove running along
+            the whole length of the relief rib. The interior surface retains clearly visible marks from the tools used
+            to shape the vessel; there are also numerous fine longitudinal scratches. The outside surface is
+            substantially smoother, without pronounced traces of hammering.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class=" modal">
+        </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
