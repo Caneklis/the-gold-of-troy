@@ -1,7 +1,7 @@
 const modalTriggers = document.querySelectorAll(".popup-trigger");
 const modalContent = document.querySelectorAll(".timeline__content-item");
 
-if (modalContent > 0) {
+if (modalTriggers) {
   setTimeout(() => {
     if (modalContent) {
       modalContent[0].classList.add("timeline__content-item--active");

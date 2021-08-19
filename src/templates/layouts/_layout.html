@@ -22,13 +22,20 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
-        <a class="logo__link" href="#"><img src="images/logo.svg" width="246" height="36" alt="Логотип ГМИИ"></a>
+        <a class="logo__link" href="#"><img src="images/logo.svg" width="292" height="44" alt="Логотип ГМИИ"></a>
         <a class="logo__link" href="#"><img src="images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс"></a>
       </div>
 
+
+
       <div class="lang">
+        {% if lang == 'ru' %}
         <a href="index.html" class="lang__link  lang__link--active">Рус</a>
-        <a href="index.html" class="lang__link">Eng</a>
+        <a href="index-eng.html" class="lang__link">Eng</a>
+        {% elif lang == 'en' %}
+        <a href="index.html" class="lang__link">Рус</a>
+        <a href="index-eng.html" class="lang__link  lang__link--active">Eng</a>
+        {% endif %}
       </div>
     </div>
   </header>

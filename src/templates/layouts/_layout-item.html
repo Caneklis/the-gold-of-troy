@@ -23,8 +23,13 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
-        <a class="logo__link" href="#"><img src="../../../images/logo.svg" width="246" height="36"
+        {% if lang == 'ru' %}
+        <a class="logo__link" href="../../../index.html"><img src="../../../images/logo.svg" width="292" height="44"
             alt="Логотип ГМИИ"></a>
+        {% elif lang == 'en' %}
+        <a class="logo__link" href="../../../index-eng.html"><img src="../../../images/logo.svg" width="292" height="44"
+            alt="Логотип ГМИИ"></a>
+        {% endif %}
         <a class="logo__link" href="#"><img src="../../../images/polus-logo.svg" width="174" height="37"
             alt="Логотип Полюс"></a>
       </div>
@@ -46,13 +51,13 @@
     {% if lang == 'ru' %}
     <a href="../../../index.html#collection">
       <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
-        <use href="../../../images/sprite_auto.svg#back-icon"></use>
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
       </svg>
     </a>
     {% elif lang == 'en' %}
     <a href="../../../index-eng.html#collection">
       <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
-        <use href="../../../images/sprite_auto.svg#back-icon"></use>
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
       </svg>
     </a>
     {% endif %}

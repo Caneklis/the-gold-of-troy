@@ -1,0 +1,73 @@
+---
+id: 7
+title: Basket-shaped
+subtitle: earring with pendants
+description: Description test
+lang: en
+num: Aap 12, Бз 57, П 101, A 5878
+material: Gold; weight 10.46 g.
+tech: Forging, soldering, stamping
+size: Height of the earring body with bar but without hook 1.08 cm; width 1.53 cm; depth 0.83 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A basket-shaped earring with pendants, with a body of seven vertical elements soldered together, each
+            element ending in rounded, petal-like tips. </p>
+          <p>On the front of the earring at the top is an applique design formed of three horizontal wires, with two
+            rows of miniature rosettes between them. There are nine rosettes in each row, made of flat discs decorated
+            with incisions around the edge and with small pellets soldered in the center.
+          <p>The ends of five double chains with scales strung on them are threaded through the perforations on the bar.
+            Pawn-type, idol-shaped pendants are attached to the lower ends of the chains.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+---
+id: 5
+title: Диадема
+subtitle: с подвесками малая
+description: Description test
+lang: ru
+num: Aap 10, Бз 296, П 426, A 5876
+material: Золото; вес 85,52 г.
+tech: Золото листовое; кованые четырехгранные проволочки; тисненый орнамент. 1750 колец, 354 чешуек (по Шлиману).
+size:
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>К длинной узкой ленте с тремя отверстиями на каждом сходящемся под углом скругленном конце, подвешены 64
+            вертикальные цепочки из двойных звеньев с подвесками, причем 50 коротких составляют центральную часть, а по
+            7 длинных обрамляют ее по сторонам. На цепочках с равными интервалами через четыре звена подвешены украшения
+            типа ромбовидных бляшек с выделенными для пронизи центральным ребром, все они имеют подвески - "идолы".
+            Идолы состоят из двух элементов: верхняя часть полукруглая; нижняя расширяется к скругленному основанию и
+            раздваивается в центре. Цепочки крепятся непосредственно к ленте-диадеме без дополнительных элементов.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 2) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

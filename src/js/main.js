@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   require("./modules/popup");
   require("./modules/video");
   require("./modules/timeline");
+  require("./modules/tab-section");
 
   const menuItems = document.querySelectorAll(".main-nav__link");
   menuItems.forEach((item) => {
@@ -193,14 +194,29 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.insertAdjacentHTML(
         "afterbegin",
         `
-        <div class="modal-container">
+        <div class="modal__container">
           <img src="${src}" alt="">
         </div>
+        <button class="modal__prev" type="button"">
+          <svg width="23px" height="8px" viewBox="0 0 23 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icon-back" fill="currentColor" fill-rule="nonzero">
+                  <path d="M0.646447,3.64645 C0.451184,3.84171 0.451184,4.15829 0.646447,4.35355 L3.82843,7.53553 C4.02369,7.7308 4.34027,7.7308 4.53553,7.53553 C4.7308,7.34027 4.7308,7.02369 4.53553,6.82843 L1.70711,4 L4.53553,1.17157 C4.7308,0.976311 4.7308,0.659728 4.53553,0.464466 C4.34027,0.269204 4.02369,0.269204 3.82843,0.464466 L0.646447,3.64645 Z M1,4.5 L23,4.5 L23,3.5 L1,3.5 L1,4.5 Z" id="Shape"></path>
+              </g>
+          </g>
+          </svg>
+        </button>
+        <button class="modal__next" type="button">
+          <svg width="23px" height="8px" viewBox="0 0 23 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icon-back" transform="translate(11.500000, 4.000000) rotate(180.000000) translate(-11.500000, -4.000000) " fill="currentColor" fill-rule="nonzero">
+                  <path d="M0.646447,3.64645 C0.451184,3.84171 0.451184,4.15829 0.646447,4.35355 L3.82843,7.53553 C4.02369,7.7308 4.34027,7.7308 4.53553,7.53553 C4.7308,7.34027 4.7308,7.02369 4.53553,6.82843 L1.70711,4 L4.53553,1.17157 C4.7308,0.976311 4.7308,0.659728 4.53553,0.464466 C4.34027,0.269204 4.02369,0.269204 3.82843,0.464466 L0.646447,3.64645 Z M1,4.5 L23,4.5 L23,3.5 L1,3.5 L1,4.5 Z" id="Shape"></path>
+              </g>
+          </g>
+          </svg>
+        </button>
 
-        <button class="modal__prev" type="button"">Назад</button>
-        <button class="modal__next" type="button">Перед</button>
-
-        <button class=" modal-close modal-exit" aria-label="Закрыть окно">
+        <button class="modal__close modal-exit" aria-label="Закрыть окно">
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.5" x2="41.0366" y2="-0.5" transform="matrix(-0.682318 -0.731055 0.547452 -0.836837 29 30)"
             stroke="#F2CC91" />
@@ -243,7 +259,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return slider_img.setAttribute("src", thumbs[i].getAttribute("href"));
       }
 
-      // modal.querySelector("img").setAttribute("src", src);
       modal.classList.add("open");
       const exits = modal.querySelectorAll(".modal-exit");
       exits.forEach(function (exit) {
@@ -254,26 +269,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-  // modals.forEach(function (trigger) {
-  //   trigger.addEventListener("click", function (event) {
-  //     event.preventDefault();
-  //     const modal = document.getElementById(trigger.dataset.modal);
-  //     const src = trigger.getAttribute("href");
-  //     modal.querySelector("img").setAttribute("src", src);
-  //     modal.classList.add("open");
-  //     const exits = modal.querySelectorAll(".modal-exit");
-  //     exits.forEach(function (exit) {
-  //       exit.addEventListener("click", function () {
-  //         modal.classList.remove("open");
-  //       });
-  //     });
-  //   });
-  // });
-
-  // const modalPopup = document.querySelectorAll(".modal");
-  const modalPopupCount = document.querySelectorAll(".modal").length;
-
-  // const modalNext = document.querySelectorAll(".modal__next");
-  // const modalPrev = document.querySelectorAll(".modal__prev");
 });

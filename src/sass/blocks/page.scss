@@ -18,11 +18,11 @@
 
   max-width: 1920px;
   display: grid;
-  grid-template-columns: 85px 3.7fr 1fr;
+  grid-template-columns: 101px 3.7fr 1fr;
   grid-template-rows: auto 1fr auto;
 
   &--inner {
-    grid-template-columns: 85px 2.5fr 1fr;
+    grid-template-columns: 101px 2.5fr 1fr;
 
     @media (max-width: 1023px) {
       grid-template-columns: 30px 2.5fr 1fr;
@@ -45,8 +45,8 @@
     background-image: url("../images/promo-bg.svg"),
       url("../images/promo-bg-2.jpg");
     background-repeat: no-repeat;
-    background-size: cover, 100%;
-    background-position-y: top;
+    background-position-y: top, -27px;
+    background-size: cover, 89%;
   }
 
   &--slide-2 {
@@ -58,12 +58,22 @@
 
   &--slide-3 {
     background-image: none;
-    background-image: url("../images/item-bg.svg");
-    background-repeat: repeat;
-    background-size: cover;
+    background-image: url("../images/bg-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
   }
 
   &--slide-4 {
+    background-image: none;
+    background-image: url("../images/item-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+    background-position-x: right;
+  }
+
+  &--slide-5 {
     background-image: none;
     background-image: url("../images/person-bg.png"),
       url("../images/bg-left.svg");
@@ -73,7 +83,7 @@
     background-position-x: right, left;
   }
 
-  &--slide-5 {
+  &--slide-6 {
     background-image: none;
     background-image: url("../images/promo-bg.svg");
     background-repeat: no-repeat;
@@ -83,7 +93,7 @@
 }
 
 .page__main {
-  grid-column: 2/-1;
+  grid-column: 2/3;
   grid-row: 2/3;
   // height: 100%;
 

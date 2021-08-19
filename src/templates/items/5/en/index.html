@@ -1,0 +1,72 @@
+---
+id: 5
+title: Small diadem
+subtitle: with pendants
+description: Description test
+lang: en
+num: Aap 10, Бз 296, П 426, A 5876
+material: Gold; weight 85.52 g.
+tech: Gold leaf; hammered four-faceted wires; repousse decoration; 1750 rings; 354 plates (according to Schliemann)
+size:
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Sixty-four vertical chains made of double links are suspended from a long narrow band with three
+            perforations at each rounded triangular end. Fifty short chains constitute the central part, and seven long
+            chains frame it at each side. Rhomboid plaques with a raised, perforated central rib are hung on the chains
+            at equal intervals every four links. All the chains have idol-shaped pendants. The idol-shaped pendants have
+            semicircular tops, while the lower part widens out to the rounded base which has a nick in the center. The
+            chains are directly attached to the diadem band without additional elements.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 2) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

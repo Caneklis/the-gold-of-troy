@@ -22,16 +22,17 @@
 
 .collections__catalog {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr;
-  gap: 2px;
-  align-items: flex-start;
-  max-width: 1000px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+  // align-items: flex-start;
+  max-width: 1105px;
 }
 
 .collections__column {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  // gap: 5px;
+  background-color: #1c1c1e;
 }
 
 .collections__item {
@@ -46,7 +47,33 @@
   }
 
   &--half {
-    width: calc(50% - 5px);
+    width: 50%;
+    position: relative;
+    align-self: flex-start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-top: 1px solid #916d47;
+      border-left: 1px solid #916d47;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-right: 1px solid #916d47;
+      border-bottom: 1px solid #916d47;
+    }
   }
 
   &--third {

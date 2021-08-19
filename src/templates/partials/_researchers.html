@@ -1,0 +1,32 @@
+<section class="tab-section  swiper-slide" id="researchers" data-hash="researchers">
+  <div class="tab-section__wrapper">
+    <h2 class="tab-section__title">ИССЛЕДОВАТЕЛИ ТРОИ</h2>
+    <div class="tab-section__text">
+      <p>Троя всегда будоражила ума ученых и энтузиастов. Мы познакомим вас с некоторыми из них.</p>
+    </div>
+    <ul class="tab-section__content-list">
+      {% import "../data/persons.html" as items %}
+      {% for item in items.persons %}
+      <li class="tab-section__content-item  person" data-id="tab-{{item.id}}" role="tabpanel" aria-expanded="false">
+        <div class="person__description">
+          <div class="person__photo"><img src="images/persons/person-{{item.id}}.jpg" alt=""></div>
+          <div class="person__text">
+            {% markdown %}
+            {% include "../data/persons/"+ item.id +".md" %}
+            {% endmarkdown %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+
+    </ul>
+    <ul class="tab-section__control-list" aria-controls="tab-example" role="tablist">
+      {% for item in items.persons %}
+      <li class="tab-section__control-item">
+        <button class="tab-section__control-btn" role="tab" aria-controls="tab-{{item.id}}" aria-selected="true"
+          type="button">{{item.period}}</button>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
