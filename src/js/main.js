@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
 
   if (document.querySelector(".swiper-container-h")) {
-    console.log("blaa");
     body.classList.add(`page__body--slide-${mainSlider.activeIndex + 1}`);
   }
 
