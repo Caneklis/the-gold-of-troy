@@ -1,22 +1,23 @@
 const modalTriggers = document.querySelectorAll(".popup-trigger");
 const modalContent = document.querySelectorAll(".timeline__content-item");
 
-if (modalTriggers) {
-  setTimeout(() => {
-    if (modalContent) {
-      modalContent[0].classList.add("timeline__content-item--active");
-    }
-    if (modalTriggers) {
-      modalTriggers[0].classList.add("timeline__year-btn--active");
-      modalTriggers[0].parentElement.classList.add(
-        "timeline__list-year--active"
-      );
-    }
-  }, 1000);
-}
+// if (modalTriggers) {
+//   setTimeout(() => {
+//     // if (modalContent) {
+//     //   modalContent[0].classList.add("timeline__content-item--active");
+//     // }
+//     if (modalTriggers) {
+//       modalTriggers[0].classList.add("timeline__year-btn--active");
+//       modalTriggers[0].parentElement.classList.add(
+//         "timeline__list-year--active"
+//       );
+//     }
+//   }, 1000);
+// }
 
 modalTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
+    document.querySelector(".timeline__promo").style.display = "none";
     const { popupTrigger } = trigger.dataset;
     const popupModal = document.querySelector(
       `[data-popup-modal="${popupTrigger}"]`
@@ -34,7 +35,7 @@ modalTriggers.forEach((trigger) => {
 
     trigger.parentElement.classList.add("timeline__list-year--active");
     trigger.classList.add("timeline__year-btn--active");
-    popupModalOpen.classList.remove("timeline__content-item--active");
     popupModal.classList.add("timeline__content-item--active");
+    popupModalOpen.classList.remove("timeline__content-item--active");
   });
 });

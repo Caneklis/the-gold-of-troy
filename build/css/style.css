@@ -1276,9 +1276,11 @@ button {
 }
 .page__body--slide-2 {
   background-image: none;
-  background-image: url("../images/bg-left.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url("../images/bg-left.svg"), url("../images/timeline-bg-2.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: left, left;
+  background-position-y: bottom, bottom;
+  background-size: contain, auto;
 }
 .page__body--slide-3 {
   background-image: none;
@@ -1597,7 +1599,14 @@ button {
   padding-left: 30px;
 }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .timeline__content {
+  flex-grow: 1;
   padding-bottom: 0;
 }
 
@@ -1804,6 +1813,26 @@ button {
   background: rgba(255, 255, 255, 0.8);
   border-bottom-left-radius: -10px;
   transform: translateY(calc(-100% + 20px)) translateX(20px);
+}
+
+.timeline__promo {
+  flex-grow: 1;
+}
+.timeline__promo p {
+  max-width: 1100px;
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.timeline__promo-title {
+  margin: 0;
+  margin-bottom: 65px;
+
+  font-size: 80px;
+  line-height: 97px;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  color: #ffffff;
 }
 
 .collections__catalog {
