@@ -1,0 +1,71 @@
+---
+id: 9
+title: Серьга
+subtitle: в виде корзиночки с подвесками
+description: Description test
+lang: ru
+num: Aap 15, Бз 59, П 103, A 5881
+material: Золото; вес 7,50 г.
+tech: Ковка, тиснение, волочение
+size: Высота корпуса серьги со щитком (без дужки) – 0,88 см.; ширина – 1,18 см.; толщина – 0,67 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Серьга в виде корзиночки, корпус которой состоит из семнадцати спаянных вертикальных проволочек. Лицевая
+            часть корпуса в верхней его части украшена накладным декором, образованным тремя горизонтальными
+            проволоками, фон между которыми заполнен тремя рядами миниатюрных шариков зерни по 11 в каждом.</p>
+          <p>К нижней части корпуса припаян узкий прямоугольный щиток; к его нижнему торцу припаяны шесть
+            соприкасающихся друг с другом колечек из плоской в сечении проволоки. В кольца продеты концы пяти двойных
+            цепочек с подвесками в форме идолов.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 3) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
