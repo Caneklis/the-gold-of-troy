@@ -1,0 +1,71 @@
+---
+id: 33
+title: Two-lobed,
+subtitle: faceted earring decorated with granulation along the ribs and on the facets
+description: Description test
+lang: en
+num: Аар 65, Бз 399, П 540, А 5931
+material: Gold; weight 8.77 g
+tech: Drawing, soldering
+size: Diameter 1.7 cm; maximum width 1.64 cm; diameter of hook 0.16 cm; maximum thickness of lobes 0.62 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A crescent-shaped earring made from two partially soldered, three-faceted solid lobes with convex interior
+            surfaces. One end is beaten out into a rounded hook which extends into a sharpened wire curving along the
+            contour of the earring. The other end of the crescent features a horizontal row of granules and two
+            flattened, six-sided buttons, one of which is set slightly higher than the other. The ribs of the lobes are
+            decorated with rows of minute soldered granules.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
