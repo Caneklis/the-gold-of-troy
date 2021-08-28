@@ -1,0 +1,74 @@
+---
+id: 41
+title: String
+subtitle: of beads
+description: Description test
+lang: en
+num: Аар 100, Бз 35, П 77, А 5966
+material: Gold; weight 37.45 g
+tech: &#45;
+size:
+- Length 46.2 cm;
+- length of plates 5.08 and 4.55 cm, width 0.1 cm;
+- diameter of perforations 0.15 cm;
+- height of studs 0.4 cm;
+- diameter 0.7 - 0.8 cm;
+- thickness of walls 0.0025 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A string of beads of various shapes. Minute beads predominate. There are numerous tubular two-winged beads,
+            also some smooth and toothed round beads; square disks; and barrel-shaped ribbed with incisions on the
+            sides.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
