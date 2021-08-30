@@ -1,0 +1,67 @@
+---
+id: 57
+title: Низка бус
+subtitle: и подвесок
+description: Description test
+lang: ru
+num: Аар 118, П 414, D 5991; 6009
+material: Золото; вес 0,94 г
+tech:
+size: Длина 4,6 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Низка мелкого бисера, двух мелких веретеновидных бус и двух коротких петлевидных подвесок из тонкой кованой
+            проволоки, смонтированных на медной проволоке. Большая часть бус обгорела. Одно кольцо отдельно.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 3) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

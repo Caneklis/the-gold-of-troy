@@ -1,0 +1,70 @@
+---
+id: 55
+title: Beads -
+subtitle: round and globular
+description: Description test
+lang: en
+num: Аар 116, Бз 81, П 133, D 5989
+material: Gold; weight 5.77 g
+tech:
+size:
+- Round bead: diameter 0.63 cm; diameter of perforation 0.42 cm.
+- Globular beads length 0.7 cm.;
+- diameter 0.7 cm.; diameter of perforation 0.35 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Fifteen hollow beads: 14 globular with large perforations rolled from sheet gold strips and one soldered
+            from two hemispherical halves with perforations punched from the inside, forming a border.</p>
+          <p>Partially creased, soiled. Torn edges in places.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 4) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

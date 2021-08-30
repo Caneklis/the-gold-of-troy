@@ -1,0 +1,66 @@
+---
+id: 70
+title: Отрезок проволоки,
+subtitle: свернутый спирально
+description: Description test
+lang: ru
+num: Аар 242, Бзб2, П 106, R 6142
+material: Золото; вес 9,45 г.
+tech:
+size: 3,14 х 3,04 см.; диаметр проволоки 0,23 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Отрезок толстой прокованной проволоки округлого сечения с заглаженными концами, свернутый спирально в два с
+            половиной витка.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 4) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

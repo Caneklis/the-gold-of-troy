@@ -1,0 +1,68 @@
+---
+id: 58
+title: Низка подвесок
+subtitle: типа бахромы
+description: Description test
+lang: ru
+num: Aap 119, Бз 83, П 135, D 5992
+material: Золото; вес 5,00 г.
+tech: Ковка
+size: Длина 16,6 см.; длина петли 0,5-0,6 см.; толщина проволоки 0,03 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Низка коротких петлевидных подвесок из тонкой кованой четырехгранной проволочки смонтирована на медной
+            проволоке вместе с четырьмя мелкими бисеринами. Создает впечатление бахромы.</p>
+          <p>Бусины обгорели. Подвески погнуты, загрязнены.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 4) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

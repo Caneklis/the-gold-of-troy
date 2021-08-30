@@ -2105,6 +2105,9 @@ button {
 }
 
 .item__article-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 3px;
   padding: 10px;
 

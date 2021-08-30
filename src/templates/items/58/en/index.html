@@ -1,0 +1,67 @@
+---
+id: 58
+title: Fringe-like
+subtitle: string of pendants
+description: Description test
+lang: en
+num: Аap 119, Бз 83, П 135, D 5992
+material: Gold; weight 4.97 g.
+tech: Forging
+size: Length 16.6 cm.; length of a loop 0.5-0.6 cm. Width of the wire 0.03 cm
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A string of short, loop-like pendants made of thin, hammered four-sided wire mounted on a copper wire, plus
+            four-minute beads. The whole produces the effect of a fringe.</p>
+          <p>Beads are scorched. Pendants are bent and soiled.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 4) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
