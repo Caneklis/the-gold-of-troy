@@ -1836,11 +1836,7 @@ button {
 }
 
 .collections__catalog {
-  display: grid;
   max-width: 1105px;
-
-  gap: 36px;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .collections__column {
@@ -1972,6 +1968,30 @@ button {
 }
 .collection__table table tr td:first-child {
   font-family: "gotham_prolight", "Arial", sans-serif;
+}
+
+.collections__catalog-slider-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  font-style: italic;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "gotham_prolight";
+  color: #ffffff;
+}
+
+.collections__catalog-slider-button-prev,
+.collections__catalog-slider-button-next {
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.collections__catalog-slider-button-prev.swiper-button-disabled,
+.collections__catalog-slider-button-next.swiper-button-disabled {
+  opacity: 0;
 }
 
 .item__wrapper {
@@ -2181,10 +2201,7 @@ button {
 
 .back-page-nav {
   width: 52px;
-  height: 160px;
   margin: 250px 8px auto auto;
-
-  background-color: #d2aa74;
 
   grid-column: 1/2;
   grid-row: 2/3;
@@ -2193,7 +2210,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 160px;
+
+  background-color: #d2aa74;
+}
+.back-page-nav a:nth-child(2) svg {
+  transform: rotate(180deg);
 }
 @media (max-width: 1023px) {
   .back-page-nav {
