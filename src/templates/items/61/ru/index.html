@@ -1,0 +1,75 @@
+---
+id: 61
+next: 62
+prev: 60
+title: Серьга
+subtitle: в виде корзиночки
+description: Description test
+lang: ru
+num: Aap 125, Бз 42, П 84, F 6005
+material: Золото; вес 7,00 г.
+tech: Ковка, пайка, штамповка, зернь.
+size:
+- Высота корпуса серьги со щитком (без дужки)-1,6 см.; ширина-1,86 см.; глубина–1,12 см.; толщина-0,05 см.; высота
+- нижнего щитка – 0,25 см.
+
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Браслет из широкой золотой пластины, в неровные загнутые наружу края которой впаяны проволочные ободки.
+            Орнаментирован напаянными снаружи двумя слегка неровными горизонтальными рядами двойных очковидных спиралей
+            из тонкой проволоки, прерываемыми четырьмя наклонными рядами из трех розетт в каждом. Элементы розетт имеют
+            вариации в размерах. Верхний и нижний край спиралей идут в противоположенных направлениях и несколько
+            смещены друг относительно друга.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

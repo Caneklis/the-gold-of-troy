@@ -111,6 +111,21 @@ document.addEventListener("DOMContentLoaded", () => {
     nasted: true,
   });
 
+  var catalogSlider = new Swiper(".collections__catalog-slider", {
+    spaceBetween: 36,
+    nasted: true,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".collections__catalog-slider-button-next",
+      prevEl: ".collections__catalog-slider-button-prev",
+    },
+    loop: false,
+    allowTouchMove: false,
+  });
+
   // (function () {
   //   // Add event listener
   //   document.addEventListener("mousemove", parallax);

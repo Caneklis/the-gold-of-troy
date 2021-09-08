@@ -49,13 +49,33 @@
   <!-- BEGIN content -->
   <div class="back-page-nav">
     {% if lang == 'ru' %}
-    <a href="../../../index.html#collection">
+    <!-- <a href="../../../index.html#collection">
+      <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
+      </svg>
+    </a> -->
+    <a href="/items/{{prev}}/ru/index.html">
+      <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
+      </svg>
+    </a>
+    <a href="/items/{{next}}/ru/index.html">
       <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
         <use href="../../../images/sprite_auto.svg#icon-back"></use>
       </svg>
     </a>
     {% elif lang == 'en' %}
-    <a href="../../../index-eng.html#collection">
+    <!-- <a href="../../../index-eng.html#collection">
+      <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
+      </svg>
+    </a> -->
+    <a href="/items/{{prev}}/en/index.html">
+      <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
+        <use href="../../../images/sprite_auto.svg#icon-back"></use>
+      </svg>
+    </a>
+    <a href="/items/{{next}}/en/index.html">
       <svg class="back-page-nav__icon" aria-hidden="true" width="22" height="10">
         <use href="../../../images/sprite_auto.svg#icon-back"></use>
       </svg>

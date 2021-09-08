@@ -21,9 +21,9 @@
 // }
 
 .collections__catalog {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 36px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // gap: 36px;
   // align-items: flex-start;
   max-width: 1105px;
 }
@@ -136,5 +136,27 @@
         }
       }
     }
+  }
+}
+
+.collections__catalog-slider-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-family: "gotham_prolight";
+  font-style: italic;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.collections__catalog-slider-button-prev,
+.collections__catalog-slider-button-next {
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+
+  &.swiper-button-disabled {
+    opacity: 0;
   }
 }

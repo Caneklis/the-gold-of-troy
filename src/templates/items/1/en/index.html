@@ -1,5 +1,7 @@
 ---
 id: 1
+next: 2
+prev: 70
 title: Flask
 subtitle: with spherical body
 description: Description test
@@ -12,6 +14,9 @@ size: Maximum height 13.73 cm; diameter 13.5 cm; interior diameter of the mouth 
 {% extends "layouts/_layout-item.html" %}
 
 {% block content %}
+
+{% set next = "id + 2" %}
+{% set prev = "70" %}
 
 <section class="item">
   <div class="item__wrapper">

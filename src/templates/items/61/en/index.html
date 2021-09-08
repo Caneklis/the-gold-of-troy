@@ -1,0 +1,74 @@
+---
+id: 61
+next: 62
+prev: 60
+title: Basket-shaped
+subtitle: earring
+description: Description test
+lang: en
+num: Aap 125, Бз 42, П 84, F 6005
+material: Gold; weight 7.0 g.
+tech: Forging, soldering, stamping, graining
+size:
+- Height of earring with bar but without hook 1.6 cm; width 1.86 cm; depth 1.12 cm; thickness 0.05 cm;
+- height of lower bar 0.25 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A basket-shaped earring made of a bent rectangular plate divided by vertical incisions into three
+            ornamental zones. The central part of the upper edge of the front is hammered into a hook with a triangular
+            base that extends into a long rectangular wire, curving beyond the back part of the earring. </p>
+          <p>A flat trapezoidal bar with five perforations punched from the back is soldered by its long edge to the
+            lower part of the earring. The front and back faces of the bar are decorated with a latticework
+            ornamentation.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
