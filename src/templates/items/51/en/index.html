@@ -1,0 +1,71 @@
+---
+id: 51
+next: 52
+prev: 50
+title: Hair-ring
+subtitle: with six lobes
+description: Description test
+lang: en
+num: Aap 112, Бз 278, П 404, D 5985
+material: Gold; weight 2.68 g.
+tech: Drawing, soldering
+size: Diameter 1.08 cm.; maximum width 0,93 cm.; diameter of hook 0.11 cm.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A crescent-shaped item of jewelry made of six wires soldered together, thickening in the center and beaten
+            out into a rounded hook at one end. The hook extends into a sharpened wire curved along the contour of the
+            crescent. Some lobes widen out unevenly.</p>
+          <p>Slightly soiled. The end of the wire is bent. Part of the interior surface is stained with varnish. The
+            inventory number is at the base of the hook. </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+---
+id: 52
+next: 53
+prev: 51
+title: Серьга
+subtitle: в форме лунницы с зернью
+description: Description test
+lang: ru
+num: Aap 113, Бз 47, II 89, D 5987
+material: Золото; вес 3,23 г.
+tech: Волочение, пайка, зернь.
+size: Диаметр 1,63 см.; ширина дольки макс. 1,36 см.; толщина 0,4 см.; диаметр дужки 0,1 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Серьга в форме лунницы состоит из цельного полукольца, образованного массивной, утолщающейся в центральной
+            части проволокой. Оно переходит в дужку круглого сечения, заканчивающуюся заостренной иглой, согнутой по
+            контуру серьги. Лунница имеет трехгранное сечение; верхняя грань слегка вогнута. Ребра украшены рядами
+            зерни; боковые грани орнаментированы перпендикулярными отрезками зерни - по восемь на каждой. Конец
+            полукольца декорирован уплощенной шестигранной профилированной шишечкой с зубчатым диском над ней. </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
