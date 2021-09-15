@@ -1836,12 +1836,14 @@ button {
 }
 
 .collections__catalog {
-  max-width: 1105px;
+  width: 100%;
 }
 
 .collections__column {
   display: flex;
   flex-wrap: wrap;
+  align-self: stretch;
+  height: auto;
 
   background-color: #1c1c1e;
 }
@@ -1855,12 +1857,16 @@ button {
   background-color: #1c1c1e;
 }
 .collections__item--full {
+  align-self: stretch;
   width: 100%;
+  height: 100%;
+
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
 .collections__item--half {
   position: relative;
 
-  align-self: flex-start;
   width: 50%;
 }
 .collections__item--half::before {

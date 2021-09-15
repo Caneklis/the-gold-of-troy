@@ -112,9 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   var catalogSlider = new Swiper(".collections__catalog-slider", {
-    spaceBetween: 36,
+    spaceBetween: 20,
     nasted: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
+    // centeredSlides: true,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
@@ -124,6 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     loop: false,
     allowTouchMove: false,
+    autoHeight: false,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 36,
+      },
+    },
   });
 
   // (function () {
