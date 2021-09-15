@@ -1,0 +1,78 @@
+---
+id: 69
+next: 70
+prev: 68
+title: Булавка
+subtitle: с плоской цилиндрической головкой, украшенной розеттами и спиралями
+description: Description test
+lang: ru
+num: Аар 240, Бз 46, П 88, О 6134
+material: Золото; вес 5,83 г.
+tech: Ковка, пайка, волочение.
+size:
+- Высота общ. 5,78 см.;
+- высота головки 2,11 см.;
+- ширина макс. 2,36 см.;
+- диаметр цилиндрика 1,55 см.;
+- длина иглы 3,75 см.;
+- диаметр иглы 0,12 см.
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Булавка с заостренной иглой из проволоки круглого сечения с головкой сложной формы, центральная часть
+            которой образована уплощенным цилиндриком: он свернут из узкой пластины, а по бокам к нему припаяны
+            выступающие диски. Каждый диск обведен по контуру припаянной тонкой проволокой круглого сечения и украшен
+            филигранной одиннадцатилепестковой розеттой.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

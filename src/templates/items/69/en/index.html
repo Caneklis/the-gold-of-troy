@@ -1,0 +1,74 @@
+---
+id: 69
+next: 70
+prev: 68
+title: A pin
+subtitle: with a flat cylindrical head decorated with rosettes and spirals
+description: Description test
+lang: en
+num: Аар 240, Бз 46, П 88, О 6134
+material: Gold; weight 5.80 g
+tech: Forging, soldering, drawing
+size:
+- Overall height 5.78 cm.;
+- height of head 2.11 cm;
+- maximum width 2.36 cm.;
+- diameter of cylinder 1.55 cm.; diameter of wire 0.12 cm, lengyj of wire 0.12cm
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A pin with a sharpened point of round wire and a head of complex form. The central part of the head
+            consists of a flattened cylinder, rolled from thin plate, with convex disks soldered to either side. Around
+            the edge of each disk is soldered a thin, round wire which encloses a filigree rosette of eleven petals.
+          </p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 4) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
