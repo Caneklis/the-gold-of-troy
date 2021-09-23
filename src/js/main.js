@@ -103,12 +103,27 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
   });
+
   var galleryTop = new Swiper(".gallery-top", {
     spaceBetween: 10,
     thumbs: {
       swiper: galleryThumbs,
     },
     nasted: true,
+
+    on: {
+      slideChange: function () {
+        const slideIframe = document.querySelectorAll(
+          'iframe[src*="youtube.com"]'
+        );
+
+        $('iframe[src*="youtube.com"]').each(function () {
+          var src = $(this).attr("src");
+          $(this).attr("src", "");
+          $(this).attr("src", src.replace("&autoplay=1", ""));
+        });
+      },
+    },
   });
 
   var catalogSlider = new Swiper(".collections__catalog-slider", {
