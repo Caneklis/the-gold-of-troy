@@ -1,15 +1,15 @@
 ---
-id: 68
-next: 69
-prev: 67
-title: Булавка
-subtitle: с головкой в виде пластины с шестью сосудиками
+id: 38
+next: 39
+prev: 37
+title: String
+subtitle: of beads with pendant
 description: Description test
-lang: ru
-num: Aap 239, Бз 44, П 86, О 6133
-material: Золото; вес 7,54 г.
-tech: Ковка, пайка, волочение.
-size: Высота общ. 6,98 см.; ширина общ. 3,65 см.; диаметр иглы – 0,14 см.
+lang: en
+num: Aap 89, Бз 24, П 61, A 5955
+material: Gold; weight 21.42 g
+tech: Drawing, soldering, embossing
+size: Length 37.0 cm
 ---
 {% extends "layouts/_layout-item.html" %}
 
@@ -23,19 +23,19 @@ size: Высота общ. 6,98 см.; ширина общ. 3,65 см.; диам
         <p class="item__article-name-description">{{subtitle}}</p>
         <table>
           <tr>
-            <td>Инв. номер</td>
+            <td>Inv. no.</td>
             <td>{{num}}</td>
           </tr>
           <tr>
-            <td>Материал:</td>
+            <td>Material:</td>
             <td>{{material}}</td>
           </tr>
           <tr>
-            <td>Техника:</td>
+            <td>Technique:</td>
             <td>{{tech}}</td>
           </tr>
           <tr>
-            <td>Размеры:</td>
+            <td>Size:</td>
             <td>{{size}}</td>
           </tr>
         </table>
@@ -47,17 +47,15 @@ size: Высота общ. 6,98 см.; ширина общ. 3,65 см.; диам
           </div>
         </div>
         <div class="item__arcticle-text">
-          <p>Булавка с заостренной иглой из проволоки круглого сечения, верхняя часть которой уплощена и скрепляет
-            плоскую прямоугольную пластину, ориентированную горизонтально по отношению к игле. </p>
-          <p>В верхней плоскости уплощенной проволоки припаяны шесть миниатюрных двуручных сосудов с биконическим
-            туловом и широкими круглыми пластинками на высоких цилиндрических горлах. Каждый сосудик спаян из семи
-            отдельных элементов.
+          <p>A string of beads of various shapes. There are very few minute beads and more large beads, including smooth
+            and toothed round beads; square disks; barrel-shaped ribbed; hexagonal truncated biconical beads; and square
+            ones with incisions on the sides. There are two smooth barrel-shaped solid beads, and tubular two-winged
+            beads, one tubular tetrahedral, and two spindle-shaped beads. Also, there is one mushroom-shaped pendant.
           </p>
         </div>
 
         <ul class="item__article-thumbs">
-
-          {% for item in range(1, 5) -%}
+          {% for item in range(1, 3) -%}
           <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
               data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
                 loading="lazy"></a></li>

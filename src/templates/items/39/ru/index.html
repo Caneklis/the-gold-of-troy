@@ -1,0 +1,71 @@
+---
+id: 39
+next: 40
+prev: 38
+title: Низка бус
+subtitle: и пронизей с одной подвеской
+description: Description test
+lang: ru
+num: Aap 89, Бз 24, П 61, A 5955
+material: Золото; вес 21,42 г
+tech: Волочение, пайка, чеканка
+size: Длина 37,0 см
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв. номер</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Низка бус и пронизей разных форм. Бисер практически отсутствует. Круглые гладкие и зубчатые, квадратные
+            шайбы, бочковидно-ребристые, усеченно-биконические шестигранные, квадратные в плане с нарезками на боковых
+            сторонах. Имеются две массивные гладкие бочковидные бусины, трубчатые двулопастные, одна трубчатая
+            четырехгранная и две веретеновидные пронизи, а также одна грибовидная подвеска.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 3) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

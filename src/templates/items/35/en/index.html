@@ -1,15 +1,15 @@
 ---
-id: 68
-next: 69
-prev: 67
-title: A pin
-subtitle: with a rectangular head surmounted by six miniature vessels
+id: 35
+next: 36
+prev: 34
+title: Bracelet
+subtitle: made of four soldered rings
 description: Description test
 lang: en
-num: Aap 239, Бз 44, П 86, О 6133
-material: Gold; weight 7.53 g.
-tech: Forging, soldering, drawing
-size: Overall height 6.98 cm..; total width 3.65 cm.; diameter of shaft 0.14 cm.
+num: Аар 73, Бз 64, П 108, А 5939
+material: Gold; weight 21.72 g
+tech: Drawing, soldering
+size: Diameter 6.1 cm; width 0.67 cm
 ---
 {% extends "layouts/_layout-item.html" %}
 
@@ -47,14 +47,13 @@ size: Overall height 6.98 cm..; total width 3.65 cm.; diameter of shaft 0.14 cm.
           </div>
         </div>
         <div class="item__arcticle-text">
-          <p>A pin with a sharpened shaft made of round wire, the upper part of which is flattened and secures a flat
-            rectangular plate that is placed horizontally in relation to the wire. Six miniature, two-handled vessels
-            with biconical bodies and disk-like rims on tall, cylindrical necks are soldered to the upper surface of the
-            flattened wire. Each miniature vessel is made of seven elements soldered together.</p>
+          <p>A closed bracelet made of four wire rings soldered together; the exterior rings are smooth and round; the
+            two interior wire rings are twisted to form a herringbone pattern. The soldering seams between the rings are
+            detached in places.</p>
         </div>
 
         <ul class="item__article-thumbs">
-          {% for item in range(1, 4) -%}
+          {% for item in range(1, 5) -%}
           <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
               data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
                 loading="lazy"></a></li>
