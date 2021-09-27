@@ -1,0 +1,73 @@
+---
+id: 60
+next: 61
+prev: 59
+title: Basket-shaped
+subtitle: earring
+description: Description test
+lang: en
+num: Аар 124, Бз 43, П 85, F 6004
+material: Gold; weight 6.66 g
+tech: Forging, soldering, stamping, granulation
+size: Earring body height with bar and hook 2 cm; width 1.8 cm; thickness 0.04 cm; height of lower bar 0.27 cm
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv. no.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A basket-shaped earring made of a bent rectangular plate divided by vertical incisions into three
+            ornamental zones. The central part of the upper edge at the front is beaten out into a hook with a
+            triangular base that extends into a long rectangular wire, curving beyond the back of the earring. The upper
+            parts of the front and back faces of the earring are decorated with horizontal rows of double wires, with
+            rows of granulation between them. A flat trapezoidal bar with five perforations punched from the back is
+            soldered by its long side to the lower part of the earring. Both the front and back faces of the bar are
+            decorated with a latticework pattern.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

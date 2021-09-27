@@ -1,0 +1,73 @@
+---
+id: 60
+next: 61
+prev: 59
+title: Серьга
+subtitle: в виде корзиночки
+description: Description test
+lang: ru
+num: Аар 124, Бз 43, П 85, F 6004
+material: Золото; вес 6,66 г
+tech: Ковка, пайка, штамповка, зернь
+size: Высота корпуса серьги со щитком (с дужкой) 2 см; ширина 1,8 см; толщина 0,04 см; высота нижнего щитка 0,27 см
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв. номер</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Серьга в виде корзиночки, корпус которой состоит из согнутой прямоугольной пластины, разделенной
+            вертикальными насечками на три орнаментальных зоны. Центральная зона корпуса серьги украшена сетчатым
+            орнаментом, боковые зоны разделены вертикальными насечками, имитирующими спаянные проволоки. Верхние части
+            передней и задней стенок корпуса орнаментированы горизонтальными рядами двойных проволочек и рядами зерни
+            между ними. К нижней части корпуса припаян продольным торцом плоский трапециевидный щиток с пятью
+            отверстиями. Лицевая и оборотная поверхности щитка украшены сетчатым орнаментом.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 5) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
