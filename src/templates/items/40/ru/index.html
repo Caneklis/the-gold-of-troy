@@ -1,0 +1,73 @@
+---
+id: 40
+next: 41
+prev: 39
+title: Низка бус
+subtitle: и пронизей с тремя подвесками
+description: Description test
+lang: ru
+num: Аар 91, Бз 21, П 58, А 5957
+material: Золото; вес 25,32 г
+tech: Волочение, пайка, чеканка
+size: Длина 36,5 см
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв. номер</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Низка бус, пронизей и подвесок разных форм. Бисер практически отсутствует. Круглые гладкие и зубчатые,
+            квадратные шайбы, бочковидно-ребристые, усеченно-биконические шестигранные, квадратные в плане с нарезками
+            на боковых сторонах, трубчатые двулопастные пронизи. Имеются две массивные гладкие бочковидные бусины, две
+            трубчатые четырехгранные и одна веретеновидная пронизи, а также две грибовидные и одна в виде стержня с
+            нарезками по нижнему концу подвески. Некоторые бусины и пронизи загрязнены и слегка погнуты. Отдельные
+            бусины прикипели друг к другу.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 2) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

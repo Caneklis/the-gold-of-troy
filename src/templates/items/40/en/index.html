@@ -1,15 +1,15 @@
 ---
-id: 39
-next: 40
-prev: 38
+id: 40
+next: 41
+prev: 39
 title: String
-subtitle: of beads with pendant
+subtitle: of beads with three pendants
 description: Description test
 lang: en
-num: Aap 89, Бз 24, П 61, A 5955
-material: Gold; weight 21.42 g
+num: Аар 91, Бз 21, П 58, А 5957
+material: Gold; weight 25.32 g
 tech: Drawing, soldering, embossing
-size: Length 37.0 cm
+size: Length 36.5 cm
 ---
 {% extends "layouts/_layout-item.html" %}
 
@@ -47,15 +47,16 @@ size: Length 37.0 cm
           </div>
         </div>
         <div class="item__arcticle-text">
-          <p>A string of beads of various shapes. There are very few minute beads and more large beads, including smooth
-            and toothed round beads; square disks; barrel-shaped ribbed; hexagonal truncated biconical beads; and square
-            ones with incisions on the sides. There are two smooth barrel-shaped solid beads, and tubular two-winged
-            beads, one tubular tetrahedral, and two spindle-shaped beads. Also, there is one mushroom-shaped pendant.
-          </p>
+          <p>A string of beads and pendants of various shapes. There are very few minute beads and there are more large
+            beads, including smooth and toothed round beads; square disks, barrel-shaped ribbed; and hexagonal truncated
+            biconical beads; square beads with incisions on the sides; and tubular two-winged beads. There are two large
+            barrel-shaped ribbed beads, two tubular tetrahedral beads, and one spindle-shaped bead. Also, there are two
+            mushroom-shaped pendants and one rod-shaped pendant with incisions on its lower end. Some beads are soiled
+            and slightly bent. Some beads are fused together.</p>
         </div>
 
         <ul class="item__article-thumbs">
-          {% for item in range(1, 3) -%}
+          {% for item in range(1, 2) -%}
           <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
               data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
                 loading="lazy"></a></li>
