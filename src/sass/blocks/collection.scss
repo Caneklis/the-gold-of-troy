@@ -51,6 +51,12 @@
     grid-column: 1/-1;
     grid-row: 1/-1;
     align-self: stretch;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: block;
+    }
   }
 
   &--half {

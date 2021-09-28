@@ -1,0 +1,72 @@
+---
+id: 6
+next: 7
+prev: 5
+title: Диадема-
+subtitle: лента налобная
+description: Description test
+lang: ru
+num: Aap 11, Бз 295, П 425, A 5877
+material: Золото; вес 7,94 г
+tech: Ковка, тиснение
+size: Длина 46,2 см; ширина 0,8–0,9 см; толщина 0,03 см; диаметр отверстий 0,18 см
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Инв. номер</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Техника:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Размеры:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>Диадема-лента налобная узкая, длинная, с тремя отверстиями на каждом скругленном конце. Края ленты
+            обрамлены точечным орнаментом, который отсутствует на концах. Отверстия на концах ленты пробиты с тыльной
+            стороны, при этом образовавшиеся на лицевой стороне закраины и заусенцы не заглажены. Точечный орнамент,
+            диагональные насечки, соединяющие полусферы, а также сами полусферы выполнены пуансонами и инструментом с
+            плоским рабочим краем с тыльной стороны.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 2) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}

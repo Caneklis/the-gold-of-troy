@@ -1,0 +1,72 @@
+---
+id: 6
+next: 7
+prev: 5
+title: Diadem
+subtitle: band
+description: Description test
+lang: en
+num: Aap 11, Бз 295, П 425, A 5877
+material: Gold; weight 7.94 g
+tech: Forging, embossing
+size: Length 46.2 cm; width 0.8–0.9 cm; thickness 0.03 cm; diameter of perforations 0.18 cm;
+---
+{% extends "layouts/_layout-item.html" %}
+
+{% block content %}
+
+<section class="item">
+  <div class="item__wrapper">
+    <article class="item__article">
+      <header class="item__article-header">
+        <h1 class="item__article-name">{{title}}</h1>
+        <p class="item__article-name-description">{{subtitle}}</p>
+        <table>
+          <tr>
+            <td>Inv. no.</td>
+            <td>{{num}}</td>
+          </tr>
+          <tr>
+            <td>Material:</td>
+            <td>{{material}}</td>
+          </tr>
+          <tr>
+            <td>Technique:</td>
+            <td>{{tech}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{size}}</td>
+          </tr>
+        </table>
+      </header>
+      <div class="item__article-content">
+        <div class="item__article-photos">
+          <div class="item__article-full-photo"><a href="../../../images/items/{{id}}/1200-1.png"
+              data-modal="pic-1"><img src="../../../images/items/{{id}}/1200-1.png" alt="{{title}}" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="item__arcticle-text">
+          <p>A long, narrow diadem band, worn on the forehead, with three holes at each rounded end. There is a line of
+            dotted ornamentation around the edge of the band, except at the ends. The perforations at the ends of the
+            band are pierced from the rear and the rims and borders originating on the ventral side project unevenly on
+            the front. The dotted ornamentation and the diagonal lines which join the relief circles, as well as the
+            circles themselves, were made from the reverse with a punch and a tool with a flat working edge.</p>
+        </div>
+
+        <ul class="item__article-thumbs">
+
+          {% for item in range(1, 2) -%}
+          <li class="item__article-thumb"><a href="../../../images/items/{{id}}/1200-{{item}}.png"
+              data-modal="pic-{{item}}"><img src="../../../images/items/{{id}}/125-{{item}}.png" alt="{{title}}"
+                loading="lazy"></a></li>
+          {%- endfor %}
+        </ul>
+
+        <div class="modal"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% endblock %}
