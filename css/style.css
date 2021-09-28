@@ -1857,12 +1857,17 @@ button {
   background-color: #1c1c1e;
 }
 .collections__item--full {
+  display: flex;
+  flex-direction: column;
   align-self: stretch;
   width: 100%;
   height: 100%;
 
   grid-column: 1/-1;
   grid-row: 1/-1;
+}
+.collections__item--full a {
+  display: block;
 }
 .collections__item--half {
   position: relative;
