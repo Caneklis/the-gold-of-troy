@@ -34,6 +34,7 @@
 
 .person__photo {
   max-width: 414px;
+  border: 2px solid #bd9869;
 }
 
 .person__text {
@@ -53,5 +54,22 @@
     &::-webkit-scrollbar-thumb {
       background: #bd9869;
     }
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #ffffff;
   }
 }

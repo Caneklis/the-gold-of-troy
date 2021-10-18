@@ -55,12 +55,10 @@
 
 .tab-section__control-item {
   flex-grow: 1;
-  position: relative;
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 40px;
   max-width: 335px;
 
   /* identical to box height, or 133% */
@@ -68,21 +66,6 @@
   text-align: center;
 
   color: rgba(255, 255, 255, 0.7);
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    width: 24px;
-    height: 24px;
-    border: 3px solid #fad398;
-    border-radius: 50%;
-    background-color: #1c1c1f;
-    z-index: 2;
-  }
 
   &--active {
     &::after {
@@ -99,6 +82,7 @@
   align-items: flex-end;
   min-height: 50px;
   padding: 0;
+  padding-bottom: 40px;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -106,10 +90,36 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #fad398;
+    border-radius: 50%;
+    background-color: #1c1c1f;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
 
   &[aria-selected="true"] {
-    font-size: 20px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+
+    &::after {
+      width: 47px;
+      height: 47px;
+      bottom: -24px;
+    }
   }
 }
 

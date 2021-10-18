@@ -4,6 +4,10 @@
     margin: 0;
   }
 
+  .gallery-top {
+    margin-bottom: 25px;
+  }
+
   .swiper-pagination {
     position: static;
 
@@ -35,4 +39,5 @@
   // width: 20%;
   height: 100%;
   opacity: 1 !important;
+  cursor: pointer;
 }

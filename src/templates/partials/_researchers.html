@@ -7,7 +7,8 @@
     <ul class="tab-section__content-list">
       {% import "../data/persons.html" as items %}
       {% for item in items.persons %}
-      <li class="tab-section__content-item  person" data-id="tab-{{item.id}}" role="tabpanel" aria-expanded="false">
+      <li class="tab-section__content-item  person" data-id="tab-{{item.id}}" role="tabpanel"
+        aria-expanded="{{item.open}}">
         <div class="person__description">
           <div class="person__photo"><img src="images/persons/person-{{item.id}}.jpg" alt=""></div>
           <div class="person__text">
@@ -23,8 +24,8 @@
     <ul class="tab-section__control-list" aria-controls="tab-example" role="tablist">
       {% for item in items.persons %}
       <li class="tab-section__control-item">
-        <button class="tab-section__control-btn" role="tab" aria-controls="tab-{{item.id}}" aria-selected="true"
-          type="button">{{item.period}}</button>
+        <button class="tab-section__control-btn" role="tab" aria-controls="tab-{{item.id}}"
+          aria-selected="{{item.open}}" type="button">{{item.period}}</button>
       </li>
       {% endfor %}
     </ul>

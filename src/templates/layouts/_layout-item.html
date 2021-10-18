@@ -1,46 +1,55 @@
-{% import "partials/_mixins.html" as mixins %}
 <!DOCTYPE html>
 <html class="page" lang="{{lang}}">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} {{subtitle}} {% else %}Template{% endif %}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {% if title %}{{ title }} {{subtitle}} {% else %}Template{% endif %}
+  </title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}" />
   <link rel="stylesheet" media="all" href="../../../css/style.min.css" />
   <!-- BEGIN social data -->
   {% include "../partials/_media-tags.html" %}
   <!-- END social data -->
-  <link rel="icon" href="../../../favicon/favicon.ico">
-  <link rel="icon" href="../../../favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png">
-  <link rel="manifest" href="../../../favicon/manifest.webmanifest">
+  <link rel="icon" href="../../../favicon/favicon.ico" />
+  <link rel="icon" href="../../../favicon/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../../../favicon/manifest.webmanifest" />
 </head>
 
-<body class="page__body  page__body--inner">
-
+<body class="page__body page__body--inner">
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
-        {% if lang == 'ru' %}
+        {# {% if lang == 'ru' %}
         <a class="logo__link" href="../../../index.html"><img src="../../../images/logo.svg" width="292" height="44"
-            alt="Логотип ГМИИ"></a>
+            alt="Логотип ГМИИ" /></a>
         {% elif lang == 'en' %}
         <a class="logo__link" href="../../../index-eng.html"><img src="../../../images/logo.svg" width="292" height="44"
-            alt="Логотип ГМИИ"></a>
+            alt="Логотип ГМИИ" /></a>
         {% endif %}
         <a class="logo__link" href="#"><img src="../../../images/polus-logo.svg" width="174" height="37"
-            alt="Логотип Полюс"></a>
+            alt="Логотип Полюс" /></a>
+        #}
+        <a class="logo__link"
+          href="{% if lang==ru %}https://pushkinmuseum.art/?lang=en{% endif %}{% if lang==en %}https://pushkinmuseum.art/{% endif %}"
+          target="_blank" rel="noopener"><img src="../../../images/logo.svg" width="292" height="44"
+            alt="Логотип ГМИИ" /></a>
+        <a class="logo__link"
+          href="{% if lang==ru %}https://polyus.com/en/?from=ru{% endif %}{% if lang==en %}https://polyus.com/ru/{% endif %}"
+          target="_blank" rel="noopener"><img src="../../../images/polus-logo.svg" width="174" height="37"
+            alt="Логотип Полюс" /></a>
       </div>
 
       <div class="lang">
         {% if lang == 'ru' %}
-        <a href="../ru/index.html" class="lang__link  lang__link--active">Рус</a>
+        <a href="../ru/index.html" class="lang__link lang__link--active">Рус</a>
         <a href="../en/index.html" class="lang__link">Eng</a>
         {% elif lang == 'en' %}
         <a href="../ru/index.html" class="lang__link">Рус</a>
-        <a href="../en/index.html" class="lang__link  lang__link--active">Eng</a>
+        <a href="../en/index.html" class="lang__link lang__link--active">Eng</a>
         {% endif %}
       </div>
     </div>
@@ -90,9 +99,7 @@
       </svg>
     </button>
     <ul class="main-nav__list" id="main-nav__list">
-      {% import "data/main-nav.html" as nav %}
-
-      {% for item in nav.list %}
+      {% import "data/main-nav.html" as nav %} {% for item in nav.list %}
       <li class="main-nav__item">
         {% if lang == 'ru' %}
         <a class="main-nav__link main-nav__link--current" href="../../../index.html#{{item.link}}">{{item.title}}</a>
@@ -105,15 +112,13 @@
     </ul>
   </nav>
 
-  <main class="page__main  page__main--inner">
+  <main class="page__main page__main--inner">
     {% block content %}{% endblock %}
   </main>
   <!-- END content -->
 
   <footer class="footer">
-    <div class="footer__wrapper">
-
-    </div>
+    <div class="footer__wrapper"></div>
   </footer>
 
   <!-- BEGIN scripts -->
@@ -121,7 +126,6 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="../../../js/main.min.js"></script>
   <!-- END scripts -->
-
 </body>
 
 </html>

@@ -50,7 +50,22 @@
   }
 
   &--slide-2 {
+    // background-image: none;
+    // background-image: url("../images/bg-left.svg"),
+    //   url("../images/timeline-bg-2.png");
+    // background-repeat: no-repeat, no-repeat;
+    // background-size: contain, auto;
+    // background-position-x: left, left;
+    // background-position-y: bottom, bottom;
+
     background-image: none;
+    background-image: url("../images/bg-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+
+  &--slide-3 {
     background-image: url("../images/bg-left.svg"),
       url("../images/timeline-bg-2.png");
     background-repeat: no-repeat, no-repeat;
@@ -59,7 +74,13 @@
     background-position-y: bottom, bottom;
   }
 
-  &--slide-3 {
+  &--slide-4 {
+    // background-image: none;
+    // background-image: url("../images/item-bg.svg");
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // background-position-y: bottom;
+    // background-position-x: right;
     background-image: none;
     background-image: url("../images/bg-right.svg");
     background-size: contain;
@@ -67,23 +88,20 @@
     background-position-x: right;
   }
 
-  &--slide-4 {
+  &--slide-5 {
+    // background-image: none;
+    // background-image: url("../images/person-bg.png"),
+    //   url("../images/bg-left.svg");
+    // background-repeat: no-repeat;
+    // background-size: contain, contain;
+    // background-position-y: bottom, top;
+    // background-position-x: right, left;
     background-image: none;
     background-image: url("../images/item-bg.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-y: bottom;
     background-position-x: right;
-  }
-
-  &--slide-5 {
-    background-image: none;
-    background-image: url("../images/person-bg.png"),
-      url("../images/bg-left.svg");
-    background-repeat: no-repeat;
-    background-size: contain, contain;
-    background-position-y: bottom, top;
-    background-position-x: right, left;
   }
 
   &--slide-6 {

@@ -1,40 +1,39 @@
-{% import "partials/_mixins.html" as mixins %}
 <!DOCTYPE html>
 <html class="page" lang="{% if lang %}{{ lang }}{% else %}ru{% endif %}">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}">
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}" />
   <link rel="stylesheet" media="all" href="{{ base_path }}css/style.min.css" />
-  <!-- BEGIN social data -->
-  {% include "../partials/_media-tags.html" %}
-  <!-- END social data -->
-  <link rel="icon" href="{{ base_path }}favicon/favicon.ico">
-  <link rel="icon" href="{{ base_path }}favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ base_path }}favicon/apple-touch-icon.png">
-  <link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest">
+  <link rel="icon" href="{{ base_path }}favicon/favicon.ico" />
+  <link rel="icon" href="{{ base_path }}favicon/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="{{ base_path }}favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest" />
 </head>
 
-<body class="page__body  page__body--slide-1">
+<body class="page__body page__body--slide-1">
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
-        <a class="logo__link" href="#"><img src="images/logo.svg" width="292" height="44" alt="Логотип ГМИИ"></a>
-        <a class="logo__link" href="#"><img src="images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс"></a>
+        <a class="logo__link"
+          href="{% if lang==ru %}https://pushkinmuseum.art/?lang=en{% endif %}{% if lang==en %}https://pushkinmuseum.art/{% endif %}"
+          target="_blank" rel="noopener"><img src="images/logo.svg" width="292" height="44" alt="Логотип ГМИИ" /></a>
+        <a class="logo__link"
+          href="{% if lang==ru %}https://polyus.com/en/?from=ru{% endif %}{% if lang==en %}https://polyus.com/ru/{% endif %}"
+          target="_blank" rel="noopener"><img src="images/polus-logo.svg" width="174" height="37"
+            alt="Логотип Полюс" /></a>
       </div>
-
-
 
       <div class="lang">
         {% if lang == 'ru' %}
-        <a href="index.html" class="lang__link  lang__link--active">Рус</a>
+        <a href="index.html" class="lang__link lang__link--active">Рус</a>
         <a href="index-eng.html" class="lang__link">Eng</a>
         {% elif lang == 'en' %}
         <a href="index.html" class="lang__link">Рус</a>
-        <a href="index-eng.html" class="lang__link  lang__link--active">Eng</a>
+        <a href="index-eng.html" class="lang__link lang__link--active">Eng</a>
         {% endif %}
       </div>
     </div>
@@ -43,17 +42,13 @@
   {% include "../partials/_main-nav.html" %}
 
   <!-- BEGIN content -->
-  <main class="page__main  swiper-container swiper-container-h">
-    <div class="swiper-wrapper">
-      {% block content %}{% endblock %}
-    </div>
+  <main class="page__main swiper-container swiper-container-h">
+    <div class="swiper-wrapper">{% block content %}{% endblock %}</div>
   </main>
   <!-- END content -->
 
   <footer class="footer">
-    <div class="footer__wrapper">
-
-    </div>
+    <div class="footer__wrapper"></div>
   </footer>
 
   <!-- BEGIN scripts -->
@@ -61,7 +56,6 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ base_path }}js/main.min.js"></script>
   <!-- END scripts -->
-
 </body>
 
 </html>
