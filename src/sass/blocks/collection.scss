@@ -115,6 +115,11 @@
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: 28px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 275px 250px;
+    margin-bottom: 20px;
+  }
 }
 
 .collection__title {
@@ -128,6 +133,11 @@
 
   p {
     max-width: 490px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 
@@ -144,11 +154,18 @@
     tr {
       td {
         font-weight: 400;
+
         &:first-child {
           font-family: $base-light-font;
         }
       }
     }
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 10px;
+    font-size: 8px;
+    line-height: 14px;
   }
 }
 

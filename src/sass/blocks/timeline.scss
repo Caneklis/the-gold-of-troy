@@ -231,4 +231,9 @@
   line-height: 97px;
 
   color: #ffffff;
+
+  @media (max-width: 960px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }

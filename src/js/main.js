@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // },
     speed: 500,
     parallax: true,
-    allowTouchMove: true,
+    allowTouchMove: false,
+    autoHeight: true,
 
     keyboard: {
       enabled: true,
@@ -49,6 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hashNavigation: {
       replaceState: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      960: {
+        autoHeight: false,
+        allowTouchMove: true,
+      },
     },
   });
 
@@ -151,6 +159,17 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 36,
       },
     },
+  });
+
+  var tabsSlider = new Swiper(".tab-section__thumbs-slider", {
+    spaceBetween: 20,
+    nasted: true,
+    slidesPerView: 2,
+    // centeredSlides: true,
+    freeMode: true,
+    loop: false,
+    allowTouchMove: true,
+    autoHeight: false,
   });
 
   // (function () {

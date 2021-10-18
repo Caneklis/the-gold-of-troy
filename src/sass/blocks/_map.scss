@@ -5,4 +5,10 @@
   img {
     max-width: 750px;
   }
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    img {
+      max-width: 300px;
+    }
+  }
 }

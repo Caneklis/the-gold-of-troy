@@ -29,5 +29,16 @@
       </li>
       {% endfor %}
     </ul>
+
+    <div class="tab-section__thumbs-slider" aria-controls="tab-example" role="tablist">
+      <div class="swiper-wrapper">
+        {% for item in items.persons %}
+        <div class="  swiper-slide">
+          <button class="tab-section__control-btn" role="tab" aria-controls="tab-{{item.id}}"
+            aria-selected="{{item.open}}" type="button">{{item.period}}</button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
