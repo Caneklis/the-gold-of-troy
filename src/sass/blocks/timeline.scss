@@ -224,6 +224,7 @@
 }
 
 .timeline__promo-title {
+  @include title;
   margin: 0;
   margin-bottom: 65px;
   font-family: $title-font;
@@ -236,4 +237,13 @@
     font-size: 40px;
     line-height: 48px;
   }
+}
+
+.timeline__more-text {
+  margin-top: auto;
+  font-size: 20px;
+  line-height: 22px;
+  /* or 110% */
+
+  color: #fad398;
 }

@@ -28,6 +28,7 @@
   @include list-reset;
   width: 100%;
   display: flex;
+  margin-top: 120px;
 
   justify-content: space-between;
   position: relative;
@@ -47,6 +48,10 @@
     height: 3px;
     background: #fad398;
   }
+}
+
+.tab-section__thumbs-slider {
+  display: none;
 }
 
 @media (max-width: 1200px) {
