@@ -134,6 +134,38 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  var mapSliderLeft = new Swiper(".map__slider-left", {
+    spaceBetween: 50,
+    slidesPerView: 1,
+    freeMode: false,
+    watchSlidesVisibility: false,
+    watchSlidesProgress: false,
+    nasted: true,
+    lazy: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var mapSliderRight = new Swiper(".map__slider-right", {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    nasted: true,
+  });
+
+  mapSliderLeft.controller.control = mapSliderRight;
+
   var catalogSlider = new Swiper(".collections__catalog-slider", {
     spaceBetween: 20,
     nasted: true,
@@ -145,6 +177,10 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl: ".collections__catalog-slider-button-next",
       prevEl: ".collections__catalog-slider-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
     },
     loop: false,
     allowTouchMove: false,

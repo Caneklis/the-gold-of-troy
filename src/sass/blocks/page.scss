@@ -67,6 +67,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+
+    @media (max-width: 1023px) {
+      background-size: cover;
+    }
   }
 
   &--slide-3 {
@@ -76,6 +80,10 @@
     background-size: contain, auto;
     background-position-x: left, left;
     background-position-y: bottom, bottom;
+
+    @media (max-width: 1023px) {
+      background-size: cover auto;
+    }
   }
 
   &--slide-4 {
@@ -90,6 +98,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+
+    @media (max-width: 1023px) {
+      background-size: cover;
+    }
   }
 
   &--slide-5 {

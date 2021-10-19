@@ -169,6 +169,20 @@
   }
 }
 
+.collections__catalog-slider {
+  .swiper-pagination-progressbar {
+    margin-top: 1px;
+    position: relative !important;
+    top: auto;
+    bottom: 0;
+    background-color: #1c1c1e;
+
+    .swiper-pagination-progressbar-fill {
+      background-color: #d2aa74;
+    }
+  }
+}
+
 .collections__catalog-slider-nav {
   display: flex;
   justify-content: space-between;

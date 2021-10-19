@@ -18,11 +18,18 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
+        <a class="logo__link  logo__link--main"
+          href="{% if lang=='ru' %}http://www.museumconservation.ru/{% endif %}{% if lang=='en' %}http://www.museumconservation.ru/?lang=en{% endif %}"
+          target="_blank" rel="noopener"><img src="images/logo-new.svg" width="130" height="44" alt="Логотип ГМИИ" />
+          {% if lang=='ru' %}
+          <p>Отдел реставрации <br>и консервации</p>
+          {% endif %}
+          {% if lang=='en' %}
+          <p>Department <br>of Conservation</p>
+          {% endif %}
+        </a>
         <a class="logo__link"
-          href="{% if lang==ru %}https://pushkinmuseum.art/?lang=en{% endif %}{% if lang==en %}https://pushkinmuseum.art/{% endif %}"
-          target="_blank" rel="noopener"><img src="images/logo.svg" width="292" height="44" alt="Логотип ГМИИ" /></a>
-        <a class="logo__link"
-          href="{% if lang==ru %}https://polyus.com/en/?from=ru{% endif %}{% if lang==en %}https://polyus.com/ru/{% endif %}"
+          href="{% if lang=='ru' %}https://polyus.com/en/?from=ru{% endif %}{% if lang=='en' %}https://polyus.com/ru/{% endif %}"
           target="_blank" rel="noopener"><img src="images/polus-logo.svg" width="174" height="37"
             alt="Логотип Полюс" /></a>
       </div>
