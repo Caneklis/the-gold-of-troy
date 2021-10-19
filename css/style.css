@@ -1924,8 +1924,14 @@ button {
 .timeline__promo p {
   max-width: 1100px;
 
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .timeline__promo {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 
 .timeline__promo-title {
@@ -1958,13 +1964,19 @@ button {
   }
 }
 
-.timeline__more-text {
-  margin-top: auto;
+p.timeline__more-text {
+  margin-top: 30px;
 
-  font-size: 20px;
+  font-size: 22px;
   line-height: 22px;
   /* or 110% */
   color: #fad398;
+}
+@media (max-width: 767px) {
+  p.timeline__more-text {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .collections__catalog {
@@ -2568,6 +2580,9 @@ button {
   }
 }
 
+.video-section {
+  padding-top: 100px;
+}
 .video-section .swiper-container {
   max-width: 920px;
   margin: 0;
