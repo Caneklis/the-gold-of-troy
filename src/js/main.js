@@ -208,6 +208,22 @@ document.addEventListener("DOMContentLoaded", () => {
     autoHeight: false,
   });
 
+  var timelineYearsSlider = new Swiper(".timeline__years-slider", {
+    spaceBetween: 20,
+    nasted: true,
+    slidesPerView: "auto",
+    // centeredSlides: true,
+    freeMode: true,
+    loop: false,
+    allowTouchMove: true,
+    autoHeight: false,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: ".timeline__years-slider-next",
+      prevEl: ".timeline__years-slider-prev",
+    },
+  });
+
   // (function () {
   //   // Add event listener
   //   document.addEventListener("mousemove", parallax);

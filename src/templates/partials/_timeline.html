@@ -43,13 +43,11 @@
           <article class="timeline__article">
             <h2><span>{{item.title}}</span> {{item.subtitle}}</h2>
 
-            <div class="timeline__pins">
+            <!-- <div class="timeline__pins">
               <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <image href="{{item.image}}" width="1440" height="922" />
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <!-- {% import "../data/1873.html" as pins %}
-                {% for pin in pins.list %} -->
 
                   {% for pin in item.pinslist %}
                   <g class="timeline__pin" id="{{pin.id}}" data-id="{{pin.text}}"
@@ -61,11 +59,10 @@
                     </polygon>
                   </g>
                   {% endfor %}
-                  <!-- {% endfor %} -->
                 </g>
               </svg>
               <div class="timeline__pin-description"></div>
-            </div>
+            </div> -->
           </article>
 
 
@@ -74,14 +71,19 @@
       </ul>
     </div>
     <div class="timeline__line">
-      <ul class="timeline__list-years">
-        {% import "../data/data.html" as items %}
-        {% for item in items.years %}
-        <li class="timeline__list-year"><button class="timeline__year-btn  popup-trigger"
-            data-popup-trigger="year-id-{{item.id}}" type="button">{{item.year}}</button>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="timeline__years-slider-prev  swiper-button-prev"></div>
+      <div class="timeline__list-years  timeline__years-slider  swiper-container">
+        <div class="swiper-wrapper">
+          {% import "../data/data.html" as items %}
+          {% for item in items.years %}
+          <div class="timeline__list-year  swiper-slide">
+            <button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-{{item.id}}"
+              type="button">{{item.year}}</button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="timeline__years-slider-next  swiper-button-next"></div>
     </div>
   </div>
   <!-- </div> -->
