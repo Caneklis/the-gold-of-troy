@@ -52,7 +52,8 @@
   height: 500px;
 
   padding-right: 30px;
-  overflow-y: scroll;
+  overflow-y: auto;
+
   &::-webkit-scrollbar {
     width: 10px;
     border: 1px solid #bd9869;

@@ -145,24 +145,24 @@
   grid-template-areas: "map";
   // grid-template-rows: max-content 1fr;
 
-  h2 {
-    // max-width: 50%;
+  // h2 {
+  //   // max-width: 50%;
 
-    grid-area: map;
-    margin: 0;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 22px;
-    z-index: 2;
-    span {
-      text-transform: uppercase;
-      display: block;
-      width: 100%;
-      font-size: 80px;
-      line-height: 97px;
-      font-family: $title-font;
-    }
-  }
+  //   grid-area: map;
+  //   margin: 0;
+  //   font-weight: normal;
+  //   font-size: 20px;
+  //   line-height: 22px;
+  //   z-index: 2;
+  //   span {
+  //     text-transform: uppercase;
+  //     display: block;
+  //     width: 100%;
+  //     font-size: 80px;
+  //     line-height: 97px;
+  //     font-family: $title-font;
+  //   }
+  // }
 }
 
 .timeline__dots-list {

@@ -1,5 +1,6 @@
 import Swiper from "swiper/bundle";
 import simpleParallax from "simple-parallax-js";
+import { Fancybox } from "@fancyapps/ui";
 // import Masonry from "masonry-layout";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -380,5 +381,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+  });
+
+  // Fancybox.bind('[data-fancybox="gallery"]', {
+  //   Toolbar: false,
+  //   animated: false,
+  //   dragToClose: false,
+
+  //   showClass: false,
+  //   hideClass: false,
+
+  //   closeButton: "top",
+
+  //   Image: {
+  //     click: "close",
+  //     wheel: "slide",
+  //     zoom: false,
+  //     fit: "cover",
+  //   },
+
+  //   Thumbs: {
+  //     minScreenHeight: 0,
+  //   },
+  // });
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: false,
+    Toolbar: false,
+
+    Image: {
+      zoom: false,
+      click: false,
+      wheel: "slide",
+    },
   });
 });

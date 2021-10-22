@@ -74,15 +74,25 @@
   }
 
   &--slide-3 {
-    background-image: url("../images/bg-left.svg"),
-      url("../images/timeline-bg-2.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, auto;
-    background-position-x: left, left;
-    background-position-y: bottom, bottom;
+    // background-image: url("../images/bg-left.svg"),
+    //   url("../images/timeline-bg-2.png");
+    // background-repeat: no-repeat, no-repeat;
+    // background-size: contain, auto;
+    // background-position-x: left, left;
+    // background-position-y: bottom, bottom;
+
+    // @media (max-width: 1023px) {
+    //   background-size: cover auto;
+    // }
+
+    background-image: url("../images/bg-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: left;
+    background-position-y: top;
 
     @media (max-width: 1023px) {
-      background-size: cover auto;
+      background-size: cover;
     }
   }
 

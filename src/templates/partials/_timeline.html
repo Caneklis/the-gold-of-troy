@@ -3,8 +3,8 @@
 
   <div class="timeline">
     <div class="timeline__content">
+      <h2 class="timeline__promo-title">Историческая справка</h2>
       <div class="timeline__promo">
-        <h2 class="timeline__promo-title">Историческая справка</h2>
         <p>В 1945 году по решению Советской контрольной комиссии – единственного легитимного органа власти после
           подписания акта о безоговорочной капитуляции нацистской Германии, многие памятники искусства из германских
           музеев были вывезены в СССР в качестве частичного возмещения ущерба, нанесенного фашистами в период временной
@@ -36,12 +36,19 @@
         <p class="timeline__more-text">Узнать больше про коллекцию можно, нажав на любую из дат на таймлайне</p>
 
       </div>
-      <ul class="timeline__content-list">
+      <ul class="timeline__content-list  ">
         {% import "../data/data.html" as items %}
         {% for item in items.years %}
-        <li class="timeline__content-item" data-popup-modal="year-id-{{item.id}}">
-          <article class="timeline__article">
-            <h2><span>{{item.title}}</span> {{item.subtitle}}</h2>
+        <li class="timeline__content-item  person" data-popup-modal="year-id-{{item.id}}">
+          <article class="timeline__article  person__description">
+            <div class="person__photo">
+              Тут будет фото
+            </div>
+            <div class="person__text">
+              <h2><span>{{item.title}}</span> </h2>
+              <p>{{item.subtitle}}</p>
+
+            </div>
 
             <!-- <div class="timeline__pins">
               <svg width="1440" height="922" viewBox="0 0 1440 922" version="1.1" xmlns="http://www.w3.org/2000/svg"
