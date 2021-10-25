@@ -88,6 +88,24 @@
 }
 
 .map__slider-right {
+  height: 500px;
+
+  padding-right: 30px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: 1px solid #bd9869;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bd9869;
+  }
+
   h2 {
     margin: 0;
     margin-bottom: 38px;

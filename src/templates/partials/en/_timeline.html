@@ -37,7 +37,7 @@
 
       </div>
       <ul class="timeline__content-list  ">
-        {% import "../data/data.html" as items %}
+        {% import "../../data/data.html" as items %}
         {% for item in items.years %}
         <li class="timeline__content-item  person" data-popup-modal="year-id-{{item.id}}">
           <article class="timeline__article  person__description">
@@ -81,7 +81,7 @@
       <div class="timeline__years-slider-prev  swiper-button-prev"></div>
       <div class="timeline__list-years  timeline__years-slider  swiper-container">
         <div class="swiper-wrapper">
-          {% import "../data/data.html" as items %}
+          {% import "../../data/data.html" as items %}
           {% for item in items.years %}
           <div class="timeline__list-year  swiper-slide">
             <button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-{{item.id}}"

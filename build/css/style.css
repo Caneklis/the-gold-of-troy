@@ -79,11 +79,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
   /* 1 */
-          text-decoration: underline;
-          text-decoration: underline dotted;
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
 
   border-bottom: none;
   /* 2 */
@@ -348,7 +347,7 @@ template {
 }
 
 /**
- * Swiper 6.8.0
+ * Swiper 6.8.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -356,7 +355,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: July 22, 2021
+ * Released on: August 23, 2021
  */
 @font-face {
   font-style: normal;
@@ -542,7 +541,7 @@ template {
   align-items: center;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
 
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 
@@ -690,12 +689,15 @@ button.swiper-pagination-bullet {
   box-shadow: none;
 
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
+}
+
+.swiper-pagination-bullet:only-child {
+  display: none !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -869,8 +871,7 @@ button.swiper-pagination-bullet {
   max-width: 100%;
   max-height: 100%;
 
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .swiper-slide-zoomed {
@@ -901,8 +902,7 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   transform-origin: 50%;
 
-  -webkit-animation: swiper-preloader-spin 1s infinite linear;
-          animation: swiper-preloader-spin 1s infinite linear;
+  animation: swiper-preloader-spin 1s infinite linear;
 }
 
 .swiper-lazy-preloader-white {
@@ -911,12 +911,6 @@ button.swiper-pagination-bullet {
 
 .swiper-lazy-preloader-black {
   --swiper-preloader-color: #000000;
-}
-
-@-webkit-keyframes swiper-preloader-spin {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes swiper-preloader-spin {
@@ -1064,6 +1058,7 @@ button.swiper-pagination-bullet {
 .not-selectable {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1081,14 +1076,12 @@ button.swiper-pagination-bullet {
 
 .carousel.is-draggable {
   cursor: move;
-  cursor: -webkit-grab;
-  cursor:         grab;
+  cursor: grab;
 }
 
 .carousel.is-dragging {
   cursor: move;
-  cursor: -webkit-grabbing;
-  cursor:         grabbing;
+  cursor: grabbing;
 }
 
 .carousel__viewport {
@@ -1135,9 +1128,7 @@ button.swiper-pagination-bullet {
 
   list-style: none;
 
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .carousel__dots .carousel__dot {
@@ -1484,13 +1475,11 @@ body.is-using-mouse .fancybox__container :focus {
 
   transform-origin: center center;
 
-  -webkit-animation: fancybox-rotate 2s linear infinite;
-          animation: fancybox-rotate 2s linear infinite;
+  animation: fancybox-rotate 2s linear infinite;
 }
 
 .fancybox__spinner svg circle {
-  -webkit-animation: fancybox-dash 1.5s ease-in-out infinite;
-          animation: fancybox-dash 1.5s ease-in-out infinite;
+  animation: fancybox-dash 1.5s ease-in-out infinite;
 
   fill: none;
   stroke: currentColor;
@@ -1501,29 +1490,9 @@ body.is-using-mouse .fancybox__container :focus {
   stroke-width: 2.75;
 }
 
-@-webkit-keyframes fancybox-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes fancybox-rotate {
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes fancybox-dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35px;
-  }
-  100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -124px;
   }
 }
 @keyframes fancybox-dash {
@@ -1553,8 +1522,7 @@ body.is-using-mouse .fancybox__container :focus {
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav,
 .fancybox__container.is-animated[aria-hidden=false] .carousel__dots,
 .fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close {
-  -webkit-animation: 0.15s ease backwards fancybox-fadeIn;
-          animation: 0.15s ease backwards fancybox-fadeIn;
+  animation: 0.15s ease backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .fancybox__backdrop,
@@ -1562,47 +1530,31 @@ body.is-using-mouse .fancybox__container :focus {
 .fancybox__container.is-animated.is-closing .fancybox__nav,
 .fancybox__container.is-animated.is-closing .carousel__dots,
 .fancybox__container.is-animated.is-closing .carousel__button.is-close {
-  -webkit-animation: 0.15s ease both fancybox-fadeOut;
-          animation: 0.15s ease both fancybox-fadeOut;
+  animation: 0.15s ease both fancybox-fadeOut;
 }
 
 .fancybox-fadeIn {
-  -webkit-animation: 0.15s ease both fancybox-fadeIn;
-          animation: 0.15s ease both fancybox-fadeIn;
+  animation: 0.15s ease both fancybox-fadeIn;
 }
 
 .fancybox-fadeOut {
-  -webkit-animation: 0.1s ease both fancybox-fadeOut;
-          animation: 0.1s ease both fancybox-fadeOut;
+  animation: 0.1s ease both fancybox-fadeOut;
 }
 
 .fancybox-zoomInUp {
-  -webkit-animation: 0.2s ease both fancybox-zoomInUp;
-          animation: 0.2s ease both fancybox-zoomInUp;
+  animation: 0.2s ease both fancybox-zoomInUp;
 }
 
 .fancybox-zoomOutDown {
-  -webkit-animation: 0.15s ease both fancybox-zoomOutDown;
-          animation: 0.15s ease both fancybox-zoomOutDown;
+  animation: 0.15s ease both fancybox-zoomOutDown;
 }
 
 .fancybox-throwOutUp {
-  -webkit-animation: 0.15s ease both fancybox-throwOutUp;
-          animation: 0.15s ease both fancybox-throwOutUp;
+  animation: 0.15s ease both fancybox-throwOutUp;
 }
 
 .fancybox-throwOutDown {
-  -webkit-animation: 0.15s ease both fancybox-throwOutDown;
-          animation: 0.15s ease both fancybox-throwOutDown;
-}
-
-@-webkit-keyframes fancybox-fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation: 0.15s ease both fancybox-throwOutDown;
 }
 
 @keyframes fancybox-fadeIn {
@@ -1613,24 +1565,9 @@ body.is-using-mouse .fancybox__container :focus {
     opacity: 1;
   }
 }
-@-webkit-keyframes fancybox-fadeOut {
-  to {
-    opacity: 0;
-  }
-}
 @keyframes fancybox-fadeOut {
   to {
     opacity: 0;
-  }
-}
-@-webkit-keyframes fancybox-zoomInUp {
-  from {
-    transform: scale(0.97) translate3d(0, 16px, 0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translate3d(0, 0, 0);
-    opacity: 1;
   }
 }
 @keyframes fancybox-zoomInUp {
@@ -1643,33 +1580,15 @@ body.is-using-mouse .fancybox__container :focus {
     opacity: 1;
   }
 }
-@-webkit-keyframes fancybox-zoomOutDown {
-  to {
-    transform: scale(0.97) translate3d(0, 16px, 0);
-    opacity: 0;
-  }
-}
 @keyframes fancybox-zoomOutDown {
   to {
     transform: scale(0.97) translate3d(0, 16px, 0);
     opacity: 0;
   }
 }
-@-webkit-keyframes fancybox-throwOutUp {
-  to {
-    transform: translate3d(0, -30%, 0);
-    opacity: 0;
-  }
-}
 @keyframes fancybox-throwOutUp {
   to {
     transform: translate3d(0, -30%, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fancybox-throwOutDown {
-  to {
-    transform: translate3d(0, 30%, 0);
     opacity: 0;
   }
 }
@@ -1702,15 +1621,13 @@ body.is-using-mouse .fancybox__container :focus {
 .fancybox__carousel.is-draggable .fancybox__slide,
 .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
   cursor: move;
-  cursor: -webkit-grab;
-  cursor:         grab;
+  cursor: grab;
 }
 
 .fancybox__carousel.is-dragging .fancybox__slide,
 .fancybox__carousel.is-dragging .fancybox__slide .fancybox__content {
   cursor: move;
-  cursor: -webkit-grabbing;
-  cursor:         grabbing;
+  cursor: grabbing;
 }
 
 .fancybox__carousel .fancybox__slide .fancybox__content {
@@ -1727,14 +1644,12 @@ body.is-using-mouse .fancybox__container :focus {
 
 .fancybox__carousel .fancybox__slide.is-draggable .fancybox__content {
   cursor: move;
-  cursor: -webkit-grab;
-  cursor:         grab;
+  cursor: grab;
 }
 
 .fancybox__carousel .fancybox__slide.is-dragging .fancybox__content {
   cursor: move;
-  cursor: -webkit-grabbing;
-  cursor:         grabbing;
+  cursor: grabbing;
 }
 
 .fancybox__image {
@@ -1742,9 +1657,7 @@ body.is-using-mouse .fancybox__container :focus {
 
   transition: none;
 
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 
   touch-action: none;
 }
@@ -1770,8 +1683,7 @@ body.is-using-mouse .fancybox__container :focus {
   max-width: 100%;
   max-height: 100%;
 
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .has-image[data-image-fit=contain-w] {
@@ -1803,8 +1715,7 @@ body.is-using-mouse .fancybox__container :focus {
   width: 100%;
   height: 100%;
 
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .fancybox__carousel .fancybox__slide.has-iframe .fancybox__content,
@@ -1883,8 +1794,7 @@ body.is-using-mouse .fancybox__container :focus {
 }
 
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__thumbs {
-  -webkit-animation: 0.15s ease-in backwards fancybox-fadeIn;
-          animation: 0.15s ease-in backwards fancybox-fadeIn;
+  animation: 0.15s ease-in backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .fancybox__thumbs {
@@ -1925,9 +1835,7 @@ body.is-using-mouse .fancybox__container :focus {
 }
 
 .fancybox__thumbs .carousel__slide > * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -1935,7 +1843,7 @@ body.is-using-mouse .fancybox__container :focus {
   position: relative;
 
   width: 100%;
-  padding-top: calc(100%/(var(--fancybox-thumbs-ratio, 1.5)));
+  padding-top: calc(100% / (var(--fancybox-thumbs-ratio, 1.5)));
 
   background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
@@ -1971,8 +1879,7 @@ body.is-using-mouse .fancybox__container :focus {
   }
 }
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__toolbar {
-  -webkit-animation: 0.15s ease-in backwards fancybox-fadeIn;
-          animation: 0.15s ease-in backwards fancybox-fadeIn;
+  animation: 0.15s ease-in backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .fancybox__toolbar {
@@ -2031,17 +1938,7 @@ body.is-using-mouse .fancybox__container :focus {
   transition-timing-function: linear;
   transition-property: transform;
 
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-.fancybox__container:-webkit-full-screen::backdrop {
-  opacity: 0;
-}
-
-.fancybox__container:fullscreen::-webkit-backdrop {
-  opacity: 0;
+  user-select: none;
 }
 
 .fancybox__container:fullscreen::backdrop {
@@ -2052,16 +1949,8 @@ body.is-using-mouse .fancybox__container :focus {
   display: none;
 }
 
-.fancybox__container:-webkit-full-screen .fancybox__button--fullscreen g:nth-child(1) {
-  display: none;
-}
-
 .fancybox__container:fullscreen .fancybox__button--fullscreen g:nth-child(1) {
   display: none;
-}
-
-.fancybox__container:-webkit-full-screen .fancybox__button--fullscreen g:nth-child(2) {
-  display: block;
 }
 
 .fancybox__container:fullscreen .fancybox__button--fullscreen g:nth-child(2) {
@@ -2154,10 +2043,6 @@ input,
 textarea {
   border-radius: 0;
 }
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  opacity: 1;
-}
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -2180,39 +2065,31 @@ input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-results-button,
 input[type=search]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   margin: 0;
 
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 input[type=number] {
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
 }
 
 select,
 textarea,
 input:matches([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 input,
@@ -2232,8 +2109,7 @@ button {
   white-space: nowrap;
 
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
 }
 
 .swiper-container {
@@ -2277,21 +2153,6 @@ a[data-fancybox] img {
 }
 .swiper-slide * {
   outline: none;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    transform: translateX(-50%) scale(0.95);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    transform: translateX(-50%) scale(1);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    transform: translateX(-50%) scale(0.95);
-  }
 }
 
 @keyframes pulse {
@@ -2908,8 +2769,7 @@ a[data-fancybox] img {
   transition: all 0.3s ease;
 }
 .timeline__year-btn:hover::after {
-  -webkit-animation: pulse 1s ease infinite;
-          animation: pulse 1s ease infinite;
+  animation: pulse 1s ease infinite;
 }
 .timeline__year-btn--active {
   font-size: 20px;
@@ -2958,8 +2818,6 @@ a[data-fancybox] img {
   display: flex;
 
   grid-area: map;
-  -ms-grid-column: 1;
-  -ms-grid-row: 1;
 }
 .timeline__pins svg {
   max-width: 100%;
@@ -3153,11 +3011,9 @@ p.timeline__more-text {
 .collection__head {
   display: grid;
 
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  column-gap: 28px;
 
-  grid-template-columns: -webkit-max-content -webkit-max-content;
-  grid-template-columns:         max-content max-content;
+  grid-template-columns: max-content max-content;
 }
 @media (max-width: 1200px) {
   .collection__head {
@@ -3292,8 +3148,7 @@ p.timeline__more-text {
   margin-bottom: 40px;
   padding-top: 45px;
 
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  column-gap: 28px;
 
   grid-template-columns: 1.2fr 1fr;
 }
@@ -3487,8 +3342,7 @@ p.timeline__more-text {
   width: 100%;
   height: 100%;
 
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .back-page-nav {
@@ -3522,8 +3376,7 @@ p.timeline__more-text {
 .person__wrapper {
   display: grid;
 
-  grid-template-columns: -webkit-max-content -webkit-max-content;
-  grid-template-columns:         max-content max-content;
+  grid-template-columns: max-content max-content;
 }
 
 .person__title {
@@ -3566,22 +3419,31 @@ p.timeline__more-text {
   .person__description {
     padding-top: 70px;
 
-    -moz-column-gap: 10%;
-         column-gap: 10%;
+    column-gap: 10%;
 
-    grid-template-columns: -webkit-max-content 410px;
-    grid-template-columns:         max-content 410px;
+    grid-template-columns: max-content 410px;
+  }
+  .person__description--full {
+    grid-template-columns: 300px 1fr;
   }
 }
 @media (max-width: 1200px) {
   .person__description {
     max-width: 500px;
 
-    -moz-column-gap: 28px;
-         column-gap: 28px;
+    column-gap: 28px;
 
     grid-template-columns: 200px 298px;
   }
+  .person__description--full {
+    grid-template-columns: 200px 1fr;
+  }
+}
+.person__description ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .person__photo {
@@ -3832,8 +3694,7 @@ iframe {
   width: 100%;
   height: 100%;
 
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .modal__close {
@@ -3849,9 +3710,7 @@ iframe {
   outline: none;
   cursor: pointer;
 
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .modal__next,
@@ -4116,15 +3975,13 @@ iframe {
   display: grid;
   max-width: 1285px;
 
-  -moz-column-gap: 80px;
-       column-gap: 80px;
+  column-gap: 80px;
 
   grid-template-columns: 2fr 1fr;
 }
 @media (max-width: 1439px) {
   .map__wrapper {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
 
     grid-template-columns: 1fr 2fr;
   }
@@ -4159,6 +4016,22 @@ iframe {
   padding-bottom: 55px;
 }
 
+.map__slider-right {
+  height: 500px;
+  padding-right: 30px;
+  overflow-y: auto;
+}
+.map__slider-right::-webkit-scrollbar {
+  width: 10px;
+
+  border: 1px solid #bd9869;
+}
+.map__slider-right::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.map__slider-right::-webkit-scrollbar-thumb {
+  background: #bd9869;
+}
 .map__slider-right h2 {
   margin: 0;
   margin-bottom: 38px;

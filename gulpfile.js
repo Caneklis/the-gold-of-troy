@@ -16,7 +16,7 @@ const plumber = require("gulp-plumber");
 const csscomb = require("gulp-csscomb");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass")(require("sass"));
-const postcss = require("gulp-postcss");
+// const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -80,24 +80,26 @@ task("nunjucks:changed", () => renderHtml(true));
 
 //Styles
 const styles = () => {
-  return src("src/sass/style.{scss,sass}")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(
-      postcss([
-        autoprefixer({
-          grid: true,
-        }),
-      ])
-    )
-    .pipe(csscomb({ configPath: "./csscomb.json" }))
-    .pipe(dest("build/css"))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(dest("build/css"))
-    .pipe(browserSync.stream());
+  return (
+    src("src/sass/style.{scss,sass}")
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      .pipe(sass().on("error", sass.logError))
+      // .pipe(
+      //   postcss([
+      //     autoprefixer({
+      //       grid: true,
+      //     }),
+      //   ])
+      // )
+      .pipe(csscomb({ configPath: "./csscomb.json" }))
+      .pipe(dest("build/css"))
+      .pipe(csso())
+      .pipe(rename("style.min.css"))
+      .pipe(sourcemap.write("."))
+      .pipe(dest("build/css"))
+      .pipe(browserSync.stream())
+  );
 };
 
 const js = () => {

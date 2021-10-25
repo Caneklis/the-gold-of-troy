@@ -29,12 +29,24 @@
     padding-top: 70px;
     grid-template-columns: max-content 410px;
     column-gap: 10%;
+
+    &--full {
+      grid-template-columns: 300px 1fr;
+    }
   }
 
   @media (max-width: 1200px) {
     max-width: 500px;
     column-gap: 28px;
     grid-template-columns: 200px 298px;
+
+    &--full {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+
+  ul {
+    @include list-reset;
   }
 }
 
