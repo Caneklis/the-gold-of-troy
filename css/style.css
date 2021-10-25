@@ -3423,6 +3423,9 @@ p.timeline__more-text {
 
     grid-template-columns: max-content 410px;
   }
+  .person__description--full {
+    grid-template-columns: 300px 1fr;
+  }
 }
 @media (max-width: 1200px) {
   .person__description {
@@ -3432,6 +3435,15 @@ p.timeline__more-text {
 
     grid-template-columns: 200px 298px;
   }
+  .person__description--full {
+    grid-template-columns: 200px 1fr;
+  }
+}
+.person__description ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .person__photo {
