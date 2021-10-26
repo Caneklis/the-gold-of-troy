@@ -137,6 +137,14 @@
     background-size: contain;
     background-position-x: right;
   }
+
+  &--slide-7 {
+    background-image: none;
+    background-image: url("../images/bg-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
 }
 
 .page__main {

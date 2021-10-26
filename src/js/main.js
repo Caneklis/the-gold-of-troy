@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainSlider = new Swiper(".swiper-container-h", {
     direction: "horizontal",
     loop: false,
+    spaceBetween: 100,
     // effect: "fade",
     // mousewheel: {
     //   releaseOnEdges: true,

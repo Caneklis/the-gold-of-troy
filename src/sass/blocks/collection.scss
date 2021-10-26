@@ -115,8 +115,9 @@
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: 28px;
+  margin-bottom: 30px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 960px) {
     grid-template-columns: 275px 250px;
     margin-bottom: 20px;
   }

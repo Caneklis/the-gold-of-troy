@@ -2277,6 +2277,13 @@ a[data-fancybox] img {
   background-position-x: right;
   background-size: contain;
 }
+.page__body--slide-7 {
+  background-image: none;
+  background-image: url("../images/bg-right.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+}
 
 .page__main {
   grid-column: 2/3;
@@ -2852,6 +2859,19 @@ a[data-fancybox] img {
 
 .timeline__promo {
   flex-grow: 1;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.timeline__promo::-webkit-scrollbar {
+  width: 10px;
+
+  border: 1px solid #bd9869;
+}
+.timeline__promo::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.timeline__promo::-webkit-scrollbar-thumb {
+  background: #bd9869;
 }
 .timeline__promo p {
   max-width: 1100px;
@@ -2874,25 +2894,16 @@ a[data-fancybox] img {
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
-  font-size: 80px;
   line-height: 48px;
-  line-height: 97px;
-  font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   color: #ffffff;
   color: #ffffff;
   text-transform: uppercase;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .timeline__promo-title {
     font-size: 80px;
     line-height: 97px;
-  }
-}
-@media (max-width: 960px) {
-  .timeline__promo-title {
-    font-size: 40px;
-    line-height: 48px;
   }
 }
 
@@ -3010,12 +3021,13 @@ p.timeline__more-text {
 
 .collection__head {
   display: grid;
+  margin-bottom: 30px;
 
   column-gap: 28px;
 
   grid-template-columns: max-content max-content;
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
   .collection__head {
     margin-bottom: 20px;
 
@@ -3036,7 +3048,7 @@ p.timeline__more-text {
 
   grid-column: 1/2;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .collection__title {
     font-size: 80px;
     line-height: 97px;
@@ -3390,7 +3402,7 @@ p.timeline__more-text {
   color: #ffffff;
   text-transform: uppercase;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .person__title {
     font-size: 80px;
     line-height: 97px;
@@ -3531,7 +3543,7 @@ p.timeline__more-text {
 }
 
 .video-section {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .video-section .swiper-container {
   max-width: 920px;
@@ -3760,7 +3772,7 @@ iframe {
   color: #ffffff;
   text-transform: uppercase;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .tab-section__title {
     font-size: 80px;
     line-height: 97px;
@@ -3942,6 +3954,7 @@ iframe {
 
 .map {
   padding-top: 50px;
+  padding-bottom: 50px;
 
   grid-column: 1/2;
 }
@@ -3964,7 +3977,7 @@ iframe {
 
   grid-column: 1/-1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .map__title {
     font-size: 80px;
     line-height: 97px;
@@ -4015,6 +4028,11 @@ iframe {
 .map__slider-left {
   padding-bottom: 55px;
 }
+@media (max-width: 1199px) {
+  .map__slider-left {
+    width: 300px;
+  }
+}
 
 .map__slider-right {
   height: 500px;
@@ -4048,4 +4066,80 @@ iframe {
   line-height: 19px;
   /* or 158% */
   color: #ffffff;
+}
+@media (max-width: 1199px) {
+  .map__slider-right {
+    height: 300px !important;
+  }
+}
+
+.contributors__wrapper {
+  display: grid;
+
+  grid-template-columns: max-content max-content;
+}
+
+.contributors__title {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .contributors__title {
+    font-size: 80px;
+    line-height: 97px;
+  }
+}
+
+.contributors__content {
+  max-height: 80vh;
+  overflow-y: scroll;
+
+  grid-column: 1/-1;
+}
+.contributors__content::-webkit-scrollbar {
+  width: 10px;
+
+  border: 1px solid #bd9869;
+}
+.contributors__content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.contributors__content::-webkit-scrollbar-thumb {
+  background: #bd9869;
+}
+.contributors__content h2 {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 40px;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  color: #fad398;
+}
+.contributors__content table {
+  width: 100%;
+  margin-bottom: 35px;
+
+  border-collapse: collapse;
+}
+.contributors__content table tr td {
+  width: 50%;
+}
+.contributors__content table tr td:first-child {
+  padding-right: 50px;
+
+  font-size: 30px;
+  line-height: 38px;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+}
+@media (max-width: 1199px) {
+  .contributors__content table tr {
+    display: grid;
+  }
 }
