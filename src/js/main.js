@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     nasted: true,
+    autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
