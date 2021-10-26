@@ -44,10 +44,17 @@
           <p>Department <br>of Conservation</p>
           {% endif %}
         </a>
-        <a class="logo__link"
-          href="{% if lang=='ru' %}https://polyus.com/en/?from=ru{% endif %}{% if lang=='en' %}https://polyus.com/ru/{% endif %}"
-          target="_blank" rel="noopener"><img src="../../../images/polus-logo.svg" width="174" height="37"
-            alt="Логотип Полюс" /></a>
+
+        {% if lang=='ru' %}
+        <a class="logo__link" href="https://polyus.com/ru/" target="_blank" rel="noopener">
+          <img src="../../../images/polus-logo.svg" width="174" height="37" alt="Логотип Полюс" />
+        </a>
+        {% endif %}
+        {% if lang=='en' %}
+        <a class="logo__link" href="https://polyus.com/en/?from=ru" target="_blank" rel="noopener">
+          <img src="../../../images/polus-logo-eng.svg" width="174" height="37" alt="Логотип Полюс" />
+        </a>
+        {% endif %}
       </div>
 
       <div class="lang">
