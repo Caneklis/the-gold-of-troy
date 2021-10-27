@@ -3,37 +3,37 @@
 
   <div class="timeline">
     <div class="timeline__content">
-      <h2 class="timeline__promo-title">Историческая справка</h2>
+      <h2 class="timeline__promo-title">History</h2>
       <div class="timeline__promo">
-        <p>В 1945 году по решению Советской контрольной комиссии – единственного легитимного органа власти после
-          подписания акта о безоговорочной капитуляции нацистской Германии, многие памятники искусства из германских
-          музеев были вывезены в СССР в качестве частичного возмещения ущерба, нанесенного фашистами в период временной
-          оккупации советских территорий. В их числе была и троянская коллекция Генриха Шлимана, часть которой, а именно
-          260 единиц хранения – наиболее ценные экспонаты из золота, электра, серебра, горного хрусталя и камня, – были
-          переданы на хранение в ГМИИ им. А.С. Пушкина, а 414 предметов, главным образом из бронзы и керамики,
-          направлены в Государственный Эрмитаж. С 1949 года все эти древности хранились без права их публикации и
-          экспонирования, поскольку по решению руководства СССР были отнесены к особому фонду.</p>
+        <p>In 1945, by the decision of the Soviet Control Commission, the only legitimate authority following the
+          signing of the Instrument of Surrender of Nazi Germany, many artworks from German museums were taken to the
+          USSR as partial reparation for the damage caused by the Nazis during their temporary occupation of Soviet
+          territories. Among them was the Trojan collection of Heinrich Schliemann, part of which - 260 items - the most
+          valuable objects of gold, electrum, silver, rock crystal and stone were transferred to the Pushkin State
+          Museum of Fine Arts, while 414 items, mainly bronzes and ceramics, were sent to the State Hermitage. Since
+          1949 all these antiquities were kept without the right to be published and exhibited, as by the decision of
+          the USSR authorities they were classified as a "special collection". </p>
 
-        <p>Первоначально троянская коллекция экспонировалась в Берлине в Музее народоведения, а с 1922 года – в Музее
-          доисторического периода и ранней истории. Однако в январе 1941 года, в ходе развязанной нацистской Германией
-          Второй Мировой войной, троянские клады, вместе с другими наиболее ценными произведениями искусства из
-          берлинских музеев, причисленных к категории «невосполнимых», специальным распоряжением были помещены в
-          депозитарий Прусского государственного банка. Позднее, в ноябре 1941 года, из-за угрозы английских
-          бомбардировок, уникальные троянские древности перевели в бетонированный бункер противозенитной батареи,
-          сооруженной близ берлинского зоопарка (Flakturm am Zoo). Здесь в апреле 1945 года Троянская коллекция и была
-          передана находившимся при ней директором Музея доисторического периода и ранней истории Вильгельмом
-          Унферцагтом офицеру Советской Армии.</p>
+        <p>The Trojan collection was initially exhibited in Berlin in the Museum of Natural History, and from 1922, in
+          the Museum of Prehistory and Early History. However, in January 1941, during the Second World War instigated
+          by Nazi Germany, the Trojan treasure, together with other more valuable works of art from Berlin museums which
+          had been classified as "irreplaceable", were placed by special decree in the safe depository of the Prussian
+          State Bank. Later, in November 1941, because of the danger of the British bombing, the unique Trojan objects
+          were moved to the concrete bunker of the anti-aircraft battery built near the Berlin zoo (Flakturm am Zoo). It
+          was here in April 1945 that the Trojan collection was handed over by Wilhelm Unverzagt, director of the Museum
+          of Prehistory and Early Art, to a Soviet officer.
+        </p>
 
-        <p>С 1941 по 1995 год троянская коллекция Шлимана оставалась недоступной как для ученых, так и для широкой
-          общественности. Более того, она считалась навсегда утраченной. Миф о «Золоте Приама» обрастал все новыми
-          легендами и домыслами, когда в декабре 1994 – январе 1995 года ряд авторитетных специалистов-экспертов в
-          области изучения культур эпохи бронзы из Германии, США, Англии, Турции и Греции впервые получили возможность
-          детально ознакомиться с хранящейся в Пушкинском музее коллекцией Шлимана. Они единодушно подтвердили ее
-          подлинность и прекрасную сохранность. Открытие выставки «Сокровища Трои из раскопок Генриха Шлимана»,
-          состоявшееся в ГМИИ им. А.С. Пушкина 15 апреля 1996 года, позволило увидеть эти сокровища сотням тысяч людей
-          из разных стран мира. </p>
+        <p>Between 1941 and 1995, Schliemann's Trojan Collection remained inaccessible to scholars and the general
+          public alike. What's more, it was thought to have been lost forever. The myth of the "Priam's gold" acquired
+          new legends and speculations when in December 1994 - January 1995, authoritative experts in the study of
+          Bronze Age cultures from Germany, the United States, Britain, Turkey and Greece for the first time had the
+          opportunity to examine in detail the Schliemann collection in the Pushkin Museum. They unanimously confirmed
+          its authenticity and excellent state of preservation. The exhibition "Treasures of Troy from Heinrich
+          Schliemann's Excavations" opened at the Pushkin State Museum of Fine Arts on 15 April 1996 and allowed
+          hundreds of thousands of people from all over the world to see the treasures.</p>
 
-        <p class="timeline__more-text">Узнать больше про коллекцию можно, нажав на любую из дат на таймлайне</p>
+        <!-- <p class="timeline__more-text">Узнать больше про коллекцию можно, нажав на любую из дат на таймлайне</p> -->
 
       </div>
       <ul class="timeline__content-list  ">
@@ -85,7 +85,7 @@
           {% for item in items.years %}
           <div class="timeline__list-year  swiper-slide">
             <button class="timeline__year-btn  popup-trigger" data-popup-trigger="year-id-{{item.id}}"
-              type="button">{{item.year}}</button>
+              type="button">{{item.year_en}}</button>
           </div>
           {% endfor %}
         </div>
