@@ -56,6 +56,15 @@
   {% include "../partials/_main-nav.html" %}
 
   <!-- BEGIN content -->
+  <div class="promo__mobile-attention">
+    {% if lang == 'ru' %}
+    Переверните
+    телефон
+    {% elif lang == 'en' %}
+    Flip the screen
+    {% endif %}
+    <img src="images/phone-icon.svg" alt="">
+  </div>
   <main class="page__main swiper-container swiper-container-h">
     <div class="swiper-wrapper">{% block content %}{% endblock %}</div>
   </main>

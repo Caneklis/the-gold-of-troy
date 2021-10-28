@@ -127,6 +127,14 @@
   display: none;
 
   @media (max-width: 767px) and (orientation: portrait) {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 45px;
   }
 }

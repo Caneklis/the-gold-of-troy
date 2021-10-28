@@ -11,11 +11,14 @@
       <li class="tab-section__content-item  person" data-id="tab-{{item.id}}" role="tabpanel"
         aria-expanded="{{item.open}}">
         <div class="person__description">
-          <div class="person__photo"><img src="images/persons/person-{{item.id}}.jpg" alt=""></div>
+          <div class="person__photo">
+            <img src="images/persons/person-{{item.id}}.jpg" alt="">
+          </div>
           <div class="person__text">
             {% markdown %}
             {% include "../../data/persons/en/"+ item.id +".md" %}
             {% endmarkdown %}
+            <p>{{item.copy}}</p>
           </div>
         </div>
       </li>

@@ -4,6 +4,10 @@
 
   @media (max-width: 767px) and (orientation: portrait) {
     pointer-events: none;
+
+    main {
+      display: none;
+    }
   }
 }
 

@@ -41,12 +41,12 @@
         {% for item in items.years %}
         <li class="timeline__content-item  person" data-popup-modal="year-id-{{item.id}}">
           <article class="timeline__article  person__description">
-            <div class="person__photo">
-              photo
+            <div class="">
+              <!-- Тут будет фото -->
             </div>
             <div class="person__text">
-              <h2><span>{{item.title_en}}</span> </h2>
-              <p>{{item.subtitle_en}}</p>
+              <h2><span>{{item.title | safe}}</span> </h2>
+              <p>{{item.subtitle | safe}}</p>
 
             </div>
 
