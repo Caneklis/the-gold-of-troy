@@ -1,6 +1,6 @@
 .logo {
   display: flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -18,6 +18,19 @@
       font-size: 20px;
       line-height: 19px;
     }
+
+    @media (max-width: 560px) {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 80px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 1;
+      }
+    }
   }
 
   @media (max-width: 1199px) {
@@ -30,6 +43,14 @@
         font-size: 10px;
         line-height: 10px;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    // max-width: 100px;
+
+    img {
+      max-width: 80px;
     }
   }
 }

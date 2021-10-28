@@ -118,7 +118,12 @@
   margin-bottom: 30px;
 
   @media (max-width: 960px) {
-    grid-template-columns: 275px 250px;
+    grid-template-columns: 1fr 250px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
     margin-bottom: 20px;
   }
 }
@@ -126,6 +131,10 @@
 .collection__title {
   @include title;
   grid-column: 1/2;
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 
 .collection__text {
@@ -155,10 +164,15 @@
     tr {
       td {
         font-weight: 400;
+        vertical-align: top;
 
         &:first-child {
           font-family: $base-light-font;
         }
+      }
+
+      @media (max-width: 560px) {
+        display: grid;
       }
     }
   }
@@ -167,6 +181,11 @@
     padding-top: 10px;
     font-size: 8px;
     line-height: 14px;
+  }
+
+  @media (max-width: 860px) {
+    grid-row: 3/4;
+    grid-column: 1/-1;
   }
 }
 
